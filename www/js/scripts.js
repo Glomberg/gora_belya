@@ -66,6 +66,29 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('underline-low');
 		$(this).toggleClass('active').find('+ .category-wrapper').stop(false, false).slideToggle();
 	});
+	
+	if ( $('.owl-carousel').length >= 1 ) {
+		$('.owl-carousel').owlCarousel({
+			responsive:{
+				0 : {
+					items: 6
+				},
+				320 : {
+					items: 3
+				},
+				480: {
+					items: 5
+				},
+				768: {
+					items: 5
+				},
+				970: {
+					items: 6
+				},
+			},
+			loop:   true,
+		});
+	}
 });
 
 //Хорошо бы это дело перенести в плагин

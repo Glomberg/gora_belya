@@ -58,6 +58,52 @@
 			font-size: 20px;
 		}
 		
+.owl-carousel {
+	
+}
+	.owl-carousel .carousel-item {
+		height: 165px;
+		background: transparent;
+		cursor: pointer;
+		transition: background 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+				flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+				justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+				align-items: center;
+	}
+	.owl-carousel .carousel-item.selected {
+		background: #F1F1FF;
+	}
+	.owl-carousel .carousel-item .ico {
+		
+	}
+		.owl-carousel .carousel-item .ico svg {
+			width: auto;
+			height: 45px;
+		}
+		.owl-carousel .carousel-item .ico svg path {
+			fill: #8C8C8C;
+			transition: fill 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		}
+		.owl-carousel .carousel-item:hover .ico svg path {
+			fill: #7890D2;
+		}
+	.owl-carousel .carousel-item .title {
+		color: #8C8C8C;
+		transition: color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+	}
+	.owl-carousel .carousel-item:hover .title {
+		color: #7890D2;
+	}
 		
 		
 		
