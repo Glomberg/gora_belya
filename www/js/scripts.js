@@ -92,10 +92,94 @@ $(document).ready(function() {
 			mouseDrag: false,
 		});
 	}
+	
 	$('.owl-carousel .carousel-item').on('click', function(){
 		$('.owl-carousel').find('.carousel-item').removeClass('selected');
 		$(this).addClass('selected');
 	})
+	
+	if ( $('.change-mode').length >= 1 ) {
+		$('.change-mode a').on('click', function(){
+			if ( ! $(this).hasClass('active') ) {
+				$('.change-mode a').removeClass('active');
+				$(this).addClass('active');
+				if ( $(this).hasClass('list-view') ) {
+					$('.subcategory-list').removeClass('table-view').addClass('list-view');
+				}
+				if ( $(this).hasClass('table-view') ) {
+					$('.subcategory-list').removeClass('list-view').addClass('table-view');
+				}
+			}
+		});
+	}
+	
+	if ( $('.subcategory-item').length >= 1 ) {
+		check_prices();
+		$('.subcategory-item .description .controls > div').on('click', function(){
+			if( $(this).hasClass('active') ) {
+				$(this).removeClass('active');
+			} else {
+				$(this).addClass('active');
+			}
+		});
+		$('.increment').on('click', function(){
+			var count = $(this).siblings('input').val();
+			if ( count == "" || count < 0 ) {
+				$(this).siblings('input').val(0);
+			} else {
+				$(this).siblings('input').val( parseInt(count) + 1 );
+			}
+			calculate();
+		});
+		$('.decrement').on('click', function(){
+			var count = $(this).siblings('input').val();
+			if ( count == "" || count < 0 ) {
+				$(this).siblings('input').val(0);
+			}
+			if ( count > 0 ) {
+				$(this).siblings('input').val( parseInt(count) - 1 );
+			}
+			calculate();
+		});
+		$('.subcategory-item .num input').on('keyup', function(){
+			if ( $(this).val() < 0  ) {
+				$(this).val(0);
+			}			
+			calculate();
+		});
+	}
+	function check_prices() {
+		$('.subcategory-item').each(function(){
+			var price = parseInt( $(this).attr('data-price') );
+			$(this).find('.price').text( price );
+		});
+		calculate();
+	}
+	function calculate() {
+		$('.subcategory-item').each(function(){
+			var price = parseInt( $(this).attr('data-price'), 10 );
+			if ( $(this).find('input').val() === "" ) {
+				$(this).find('input').val(0);
+				var count = 0;
+				$(this).find('.price').removeClass('small-price');
+			} else {
+				var count = parseInt( $(this).find('input').val(), 10 );
+			}
+			if ( count == 0 ) {
+				$(this).find('.bold-price').hide();
+				$(this).find('.price').show().removeClass('small-price');
+			}
+			if ( count == 1 ) {
+				$(this).find('.bold-price').show().text( count * price );
+				$(this).find('.price').removeClass('small-price').hide();
+			}
+			if ( count > 1 ) {
+				$(this).find('.bold-price').show().text( count * price );
+				$(this).find('.price').show().addClass('small-price');
+			}
+		});
+	}
+	
 });
 
 //Хорошо бы это дело перенести в плагин

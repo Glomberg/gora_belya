@@ -578,13 +578,13 @@
 				<div class="subcategory-note">
 					<strong>Обратите внимание:</strong> услуга глажки включена по умолчанию, вы можете добавить стирку и плечики <strong>для отдельных вещей</strong> кликнув на нужную иконку или <strong>для всех</strong> выбрав нужную опцию на панели справа.
 					<div class="change-mode">
-						<a href="javascript:void(0)" class="list-view"></a>
-						<a href="javascript:void(0)" class="table-view"></a>
+						<a href="javascript:void(0)" class="list-view active" title="Режим просмотра: список"></a>
+						<a href="javascript:void(0)" class="table-view" title="Режим просмотра: таблица"></a>
 					</div>
 				</div>
 			</div>
 			<div class="subcategory-list list-view">
-				<div class="subcategory-item">
+				<div class="subcategory-item" data-price="50">
 					<div class="ico">
 						<img src="images/t-shirt.svg" alt="">
 					</div>
@@ -592,12 +592,84 @@
 						<div class="title">Футболка / майка</div>
 						<div class="controls">
 							<div class="wash"></div>
+						</div>
+					</div>
+					<div class="num">
+						<div class="decrement">-</div>
+						<input type="text">
+						<div class="increment">+</div>
+					</div>
+					<div class="prices">
+						<div class="price"></div>
+						<div class="bold-price"></div>
+					</div>
+				</div>
+				<div class="subcategory-item" data-price="70">
+					<div class="ico">
+						<img src="images/longsleev.svg" alt="">
+					</div>
+					<div class="description">
+						<div class="title">Футболка с длинным рукавом</div>
+						<div class="controls">
+							<div class="wash"></div>
 							<div class="strap"></div>
 						</div>
 					</div>
-					<div class="num"></div>
-					<div class="price"></div>
+					<div class="num">
+						<div class="decrement">-</div>
+						<input type="text">
+						<div class="increment">+</div>
+					</div>
+					<div class="prices">
+						<div class="price"></div>
+						<div class="bold-price"></div>
+					</div>
 				</div>
+				<div class="subcategory-item" data-price="65">
+					<div class="ico">
+						<img src="images/polo.svg" alt="">
+					</div>
+					<div class="description">
+						<div class="title">Поло (футболка с воротником)</div>
+						<div class="controls">
+							<div class="wash"></div>
+							<div class="strap"></div>
+						</div>
+					</div>
+					<div class="num">
+						<div class="decrement">-</div>
+						<input type="text">
+						<div class="increment">+</div>
+					</div>
+					<div class="prices">
+						<div class="price"></div>
+						<div class="bold-price"></div>
+					</div>
+				</div>
+				<div class="subcategory-item" data-price="90">
+					<div class="ico">
+						<img src="images/shirt-short.svg" alt="">
+					</div>
+					<div class="description">
+						<div class="title">Сорочка с коротким рукавом</div>
+						<div class="controls">
+							<div class="wash"></div>
+							<div class="strap"></div>
+						</div>
+					</div>
+					<div class="num">
+						<div class="decrement">-</div>
+						<input type="text">
+						<div class="increment">+</div>
+					</div>
+					<div class="prices">
+						<div class="price"></div>
+						<div class="bold-price"></div>
+					</div>
+				</div>
+			</div>
+			<div class="ajax-loader">
+				<div></div>
 			</div>
 		</div>
 		<div class="col-xs-4 checkout-right">

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66 49">
+	<style><![CDATA[
+		.sprite { display: none; }
+		.sprite:target { display: inline; }
+		.grey{fill:none;stroke:#3f3f3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+		.white{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+	]]></style>
+	<g class="sprite" id="wash-grey">
+		<rect class="grey" x="1" y="1" width="42" height="57"/>
+		<line class="grey" x1="1" y1="11" x2="31.68" y2="11"/>
+		<line class="grey" x1="38.95" y1="11" x2="43" y2="11"/>
+		<circle class="grey" cx="22" cy="32" r="15"/>
+		<path class="grey" d="M22,22a9.64,9.64,0,0,1,9.68,9.6A9.47,9.47,0,0,1,22,41a9.48,9.48,0,0,1-9.69-9.4"/>
+		<path class="grey" d="M17.16,32A4.82,4.82,0,0,1,22,27.2"/>
+	</g>
+	<g class="sprite" id="wash-white">
+		<rect class="white" x="1" y="1" width="42" height="57"/>
+		<line class="white" x1="1" y1="11" x2="31.68" y2="11"/>
+		<line class="white" x1="38.95" y1="11" x2="43" y2="11"/>
+		<circle class="white" cx="22" cy="32" r="15"/>
+		<path class="white" d="M22,22a9.64,9.64,0,0,1,9.68,9.6A9.47,9.47,0,0,1,22,41a9.48,9.48,0,0,1-9.69-9.4"/>
+		<path class="white" d="M17.16,32A4.82,4.82,0,0,1,22,27.2"/>
+	</g>
+	<g class="sprite" id="strap-grey">
+		<path class="grey" d="M33,48H63a2,2,0,0,0,2-2V42c-0.12-3-4-3.08-4-3.08s-0.31,2.56-2,2-1-3-1-3L46,31c-3.44-1.75-4-4-4-4a10.05,10.05,0,0,0-9-7,10.05,10.05,0,0,0-9,7s-0.56,2.25-4,4L8,37.92s0.69,2.44-1,3-2-2-2-2S1.13,39,1,42v4a2,2,0,0,0,2,2H33" transform="translate(0 0)"/>
+		<path class="grey" d="M33,20V15.07a5,5,0,0,1,1.46-3.53L37,9a5,5,0,1,0-8-6c-1.5,3.25-3,3-3,3" transform="translate(0 0)"/>
+		<line class="grey" x1="18" y1="43" x2="18" y2="44"/>
+		<line class="grey" x1="24" y1="43" x2="24" y2="44"/>
+		<line class="grey" x1="30" y1="43" x2="30" y2="44"/>
+		<line class="grey" x1="36" y1="43" x2="36" y2="44"/>
+		<line class="grey" x1="42" y1="43" x2="42" y2="44"/>
+		<line class="grey" x1="48" y1="43" x2="48" y2="44"/>
+		<path class="grey" d="M51,40L33.63,27.48a1,1,0,0,0-1.24,0L10,44H56l-2-1.6" transform="translate(0 0)"/>
+	</g>
+	<g class="sprite" id="strap-white">
+		<path class="white" d="M33,48H63a2,2,0,0,0,2-2V42c-0.12-3-4-3.08-4-3.08s-0.31,2.56-2,2-1-3-1-3L46,31c-3.44-1.75-4-4-4-4a10.05,10.05,0,0,0-9-7,10.05,10.05,0,0,0-9,7s-0.56,2.25-4,4L8,37.92s0.69,2.44-1,3-2-2-2-2S1.13,39,1,42v4a2,2,0,0,0,2,2H33" transform="translate(0 0)"/>
+		<path class="white" d="M33,20V15.07a5,5,0,0,1,1.46-3.53L37,9a5,5,0,1,0-8-6c-1.5,3.25-3,3-3,3" transform="translate(0 0)"/>
+		<line class="white" x1="18" y1="43" x2="18" y2="44"/>
+		<line class="white" x1="24" y1="43" x2="24" y2="44"/>
+		<line class="white" x1="30" y1="43" x2="30" y2="44"/>
+		<line class="white" x1="36" y1="43" x2="36" y2="44"/>
+		<line class="white" x1="42" y1="43" x2="42" y2="44"/>
+		<line class="white" x1="48" y1="43" x2="48" y2="44"/>
+		<path class="white" d="M51,40L33.63,27.48a1,1,0,0,0-1.24,0L10,44H56l-2-1.6" transform="translate(0 0)"/>
+	</g>
+</svg>
