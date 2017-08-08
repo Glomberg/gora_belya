@@ -86,9 +86,16 @@ $(document).ready(function() {
 					items: 6
 				},
 			},
-			loop:   true,
+			loop:      false,
+			nav:       true,
+			navText:   ["", ""],
+			mouseDrag: false,
 		});
 	}
+	$('.owl-carousel .carousel-item').on('click', function(){
+		$('.owl-carousel').find('.carousel-item').removeClass('selected');
+		$(this).addClass('selected');
+	})
 });
 
 //Хорошо бы это дело перенести в плагин
