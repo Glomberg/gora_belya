@@ -122,32 +122,33 @@ $(document).ready(function() {
 				$(this).addClass('active');
 			}
 		});
-		$('.increment').on('click', function(){
-			var count = $(this).siblings('input').val();
-			if ( count == "" || count < 0 ) {
-				$(this).siblings('input').val(0);
-			} else {
-				$(this).siblings('input').val( parseInt(count) + 1 );
-			}
-			calculate();
-		});
-		$('.decrement').on('click', function(){
-			var count = $(this).siblings('input').val();
-			if ( count == "" || count < 0 ) {
-				$(this).siblings('input').val(0);
-			}
-			if ( count > 0 ) {
-				$(this).siblings('input').val( parseInt(count) - 1 );
-			}
-			calculate();
-		});
-		$('.subcategory-item .num input').on('keyup', function(){
-			if ( $(this).val() < 0  ) {
-				$(this).val(0);
-			}			
-			calculate();
-		});
 	}
+	
+	$('.increment').on('click', function(){
+		var count = $(this).siblings('input').val();
+		if ( count == "" || count < 0 ) {
+			$(this).siblings('input').val(0);
+		} else {
+			$(this).siblings('input').val( parseInt(count) + 1 );
+		}
+		calculate();
+	});
+	$('.decrement').on('click', function(){
+		var count = $(this).siblings('input').val();
+		if ( count == "" || count < 0 ) {
+			$(this).siblings('input').val(0);
+		}
+		if ( count > 0 ) {
+			$(this).siblings('input').val( parseInt(count) - 1 );
+		}
+		calculate();
+	});
+	$('.num input').on('keyup', function(){
+		if ( $(this).val() < 0  ) {
+			$(this).val(0);
+		}			
+		calculate();
+	});
 	function check_prices() {
 		$('.subcategory-item').each(function(){
 			var price = parseInt( $(this).attr('data-price') );
@@ -176,6 +177,27 @@ $(document).ready(function() {
 			if ( count > 1 ) {
 				$(this).find('.bold-price').show().text( count * price );
 				$(this).find('.price').show().addClass('small-price');
+			}
+		});
+	}
+	
+	if ( $('.checkout-duration').length >= 1 ) {
+		$('.duration-option label').on('click', function(){
+			$('.duration-option input').removeAttr('checked');
+			$(this).parent().siblings('input').attr('checked', 'checked');
+		});
+	}
+	
+	if ( $('.methods').length >= 1 ) {
+		$('.trigger-buttons button').on('click', function(){
+			if ( ! $(this).hasClass('active') ) {
+				$(this).siblings('button').removeClass('active');
+				$(this).addClass('active');
+				if( $(this).attr('id') == "opener" ) {
+					$(this).parent('.trigger-buttons').next('.courier').addClass('visible');
+				} else {
+					$(this).parent('.trigger-buttons').next('.courier').removeClass('visible');
+				}
 			}
 		});
 	}

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Оформление заказа</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/bootstrap.grid.css" rel="stylesheet">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	
+	<link href="js/owl/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="js/owl/assets/owl.theme.default.css" rel="stylesheet">
+	<script src="js/owl/owl.carousel.min.js" type="text/javascript"></script>
+	
+	<script src="js/scripts.js" type="text/javascript"></script>
+	<link href="css/style-bazz.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<header class="container-fluid">
+	<div class="main-menu">
+		<div class="logo">
+			<a href="#"><img src="images/logo_header.png" alt=""></a>
+		</div>
+		<div class="container menu-wrapper">
+			<ul class="menu">
+				<li>
+					<a href="#">Оформить заказ</a>
+				</li>
+				<li>
+					<a href="#">Цены</a>
+				</li>
+				<li>
+					<a href="/build/payment-and-delivery.html">Оплата и доставка</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Блог</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+				<li>
+					<a href="#">О нас</a>
+				</li>
+			</ul>
+		</div>
+		<div class="login">
+			<a href="#">Войти</a>
+		</div>
+	</div>
+	<div class="main-menu mobile-menu">
+		<div class="mobile-menu__button"></div>
+		<div class="mobile-menu__popup-menu">
+			<div class="mobile-menu__contacts">
+				<div class="mobile-menu__close"></div>
+				<div class="position">
+					<div class="city">
+						Магадан
+					</div>
+					<div class="worktime">
+						с 8 до 20
+					</div>
+				</div>
+				<div class="phones">
+					<a href="tel:8 914 123-1-123">8 914 123-1-123</a>
+					<a href="tel:8 800 123-1-123">8 800 123-1-123</a>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<a href="#" class="login">Войти</a>
+				</li>
+				<li>
+					<a href="#">Цены</a>
+				</li>
+				<li>
+					<a href="#">Оплата и доставка</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+				<li>
+					<a href="#">Блог</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+				<li>
+					<a href="#">О нас</a>
+				</li>
+				<li>
+					<a href="#">Публичная оферта</a>
+				</li>
+				<li>
+					<a href="#">Задать вопрос</a>
+				</li>
+			</ul>
+		</div>
+		<div class="logo">
+			<a href="#"><img src="images/logo_header.png" alt=""></a>
+		</div>
+		<div class="container menu-wrapper">
+			<ul class="menu">
+				<li>
+					<a href="#">Оформить заказ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="cart-header">
+		<div class="cart-inner">
+			<a href="#">
+				<div class="cart-icon-container">
+					<div class="cart-icon"></div>
+					<div class="cart-qty">
+						14
+					</div>
+				</div>
+				
+				<div class="cart-cost">
+					1 250
+				</div>
+			</a>
+			<div class="cart-open">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								Брюки мужские
+								<div class="type-of-service">
+									Стирка, глажка, плечики 3 шт.
+								</div>
+							</td>
+							<td>
+								3 шт.
+							</td>
+							<td>
+								600
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Рубашка мужская
+								<div class="type-of-service">
+									Стирка, глажка, плечики 2 шт.
+								</div>
+							</td>
+							<td>
+								3 шт.
+							</td>
+							<td>
+								600
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Наволочка
+								<div class="type-of-service">
+									Глажка
+								</div>
+							</td>
+							<td>
+								4 шт.
+							</td>
+							<td>
+								800
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Пододеяльник
+								<div class="type-of-service">
+									Глажка
+								</div>
+							</td>
+							<td>
+								1 шт.
+							</td>
+							<td>
+								400
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Простыня
+								<div class="type-of-service">
+									Глажка
+								</div>
+							</td>
+							<td>
+								1 шт.
+							</td>
+							<td>
+								300
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="order-sum">
+					<span>Сумма заказа:</span> <i>3 300 </i>
+				</div>
+				<div class="cart-order-button">
+					<a href="#" class="order-button violet-button">Оформить заказ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- CONTENT  -->
+<div class="checkout-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="checkout-header-steps">
+					<div class="checkout-header-steps-number">1</div>
+					<div>
+						<div class="checkout-header-steps-title">Составьте список</div>
+						<div class="checkout-header-steps-description">или <a href="checkout-unlimited.html" class="dashed-link">предоставьте это нам</a></div>
+					</div>
+				</div>
+				<div class="checkout-header-steps active">
+					<div class="checkout-header-steps-number">2</div>
+					<div>
+						<div class="checkout-header-steps-title">Оплата, доставка</div>
+						<div class="checkout-header-steps-description">Выберите способ удобный для вас</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row methods">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5">
+			<div class="delivery">Выберите<br>способ доставки:</div>
+			<div class="trigger-buttons">
+				<button class="active">Привезу сам</button>
+				<button id="opener">Вызвать курьера</button>
+			</div>
+			<div class="courier">
+				123<br>
+				123<br>
+				123<br>
+				123<br>
+				123<br>
+			</div>
+			<div>
+				<a href="javascript:void(0)" class="dashed-link">Забрать другим способом</a>
+			</div>
+		</div>
+		<div class="col-xs-5">
+			<div class="payment">Выберите<br>способ предоплаты:</div>
+			<div class="trigger-buttons">
+				<button class="active">Онлайн</button>
+				<button>Наличными</button>
+			</div>
+			<div>
+				<a href="javascript:void(0)" class="dashed-link">Для вас доступна постоплата</a>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+	<div class="row methods-buttons">
+		<div class="col-xs-6">
+			<a href="checkout.html" class="grey-button">НАЗАД</a>
+		</div>
+		<div class="col-xs-6">
+			<a href="#" class="blue-button">ПРОДОЛЖИТЬ</a>
+		</div>
+	</div>
+</div>
+<!-- /CONTENT -->
+
+<footer class="container-fluid">
+	<div class="container">
+		<div class="footer-left">
+			<img src="images/logo_header.png" alt="">
+			<p>
+				Бережно относимся к каждой вещи. Используем только одноразовую упаковку.
+				Заказы обрабатываются изолированно от других. Тратьте время на удовольствия, а не на кучу белья.
+			</p>
+			<p class="footer-left_time">Заказы принимаем <b>ежедневно c 8 до 20</b></p>
+			<p class="footer-left_phones"><a href="tel:8 800 123-1-123">8 800 123-1-123</a><a href="tel:8 914 123-1-123">8 914 123-1-123</a></p>
+		</div>
+		<div class="footer-right">
+			<div class="footer_menu-wrapper">
+				<h2>Информация</h2>
+				<ul>
+					<li>
+						<a href="#">О нас</a>
+					</li>
+					<li>
+						<a href="#">Наши услуги</a>
+					</li>
+					<li>
+						<a href="#">Оплата и доставка</a>
+					</li>
+					<li>
+						<a href="#">Отзывы</a>
+					</li>
+					<li>
+						<a href="#">Блог</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+					<li>
+						<a href="#">Публичная оферта</a>
+					</li>
+				</ul>
+			</div><div class="row">
+			<div class="col-xs-12">
+				<div class="unlimited-body"></div>
+			</div>
+		</div>pper">
+				<h2>Цены</h2>
+				<ul>
+					<li>
+						<a href="#">Мужская одежда</a>
+					</li>
+					<li>
+						<a href="#">Женская одежда</a>
+					</li>
+					<li>
+						<a href="#">Детская одежда</a>
+					</li>
+					<li>
+						<a href="#">Полотенца/Скатерти/Салфетки</a>
+					</li>
+					<li>
+						<a href="#">Постельное бельё</a>
+					</li>
+					<li>
+						<a href="#">Махровое постельное бельё</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container mobile">
+		<div class="footer-left">
+			<img src="images/logo_header.png" alt="">
+			<p class="footer-left_time">Заказы принимаем <b>ежедневно c 8 до 20</b></p>
+			<p class="footer-left_phones"><a href="tel:8 914 123-1-123">8 914 123-1-123</a></p>
+			<p class="footer-left_phones"><a href="tel:8 800 123-1-123">8 800 123-1-123</a></p>
+		</div>
+		<div class="footer-right">
+			<div class="footer_menu-wrapper">
+				<ul>
+					<li>
+						<a href="#">Цены</a>
+					</li>
+					<li>
+						<a href="#">О нас</a>
+					</li>
+					<li>
+						<a href="#">Наши услуги</a>
+					</li>
+					<li>
+						<a href="#">Оплата и доставка</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer_menu-wrapper">
+				<ul>
+					<li>
+						<a href="#">Отзывы</a>
+					</li>
+					<li>
+						<a href="#">Блог</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+					<li>
+						<a href="#">Публичная оферта</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="container-fluid footer_copyright">
+	<div class="container">
+		<div class="copyright">
+				&copy; Легкий день — сервис чистого белья, 2017. Все права защищены
+		</div>
+		<div class="developer">
+			<a href="http://web-alt.ru">
+				<img src="images/logo-webalt.png" alt="Сайт разработан WEB-ALTERNATIVE">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="ask ask-question">
+	<a href="#">Задать вопрос</a>
+</div>
+<div class="ask ask-question-form">
+	<div class="ask-close" title="Закрыть форму">
+	</div>
+	<h2>Задать вопрос</h2>
+	<form>
+		<input type="text" name="name" placeholder="Как к Вам обращаться">
+		<input type="text" name="email" placeholder="E-mail">
+		<textarea name="question" placeholder="Ваш вопрос"></textarea>
+		<input type="button" class="order-button violet-button" value="Отправить">
+	</form>
+</div>
+<div class="ask ask-question-success">
+	Ваше сообщение<br>отправлено
+</div>
+	
+</body>
+</html>

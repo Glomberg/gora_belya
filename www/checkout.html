@@ -221,7 +221,7 @@
 					<div class="checkout-header-steps-number">1</div>
 					<div>
 						<div class="checkout-header-steps-title">Составьте список</div>
-						<div class="checkout-header-steps-description">или <a href="javascript:void(0)" class="dashed-link">предоставьте это нам</a></div>
+						<div class="checkout-header-steps-description">или <a href="checkout-unlimited.html" class="dashed-link">предоставьте это нам</a></div>
 					</div>
 				</div>
 				<div class="checkout-header-steps">
@@ -667,6 +667,27 @@
 						<div class="bold-price"></div>
 					</div>
 				</div>
+				<div class="subcategory-item" data-price="90">
+					<div class="ico">
+						<img src="images/shirt-short.svg" alt="">
+					</div>
+					<div class="description">
+						<div class="title">Сорочка с коротким рукавом</div>
+						<div class="controls">
+							<div class="wash"></div>
+							<div class="strap"></div>
+						</div>
+					</div>
+					<div class="num">
+						<div class="decrement">-</div>
+						<input type="text">
+						<div class="increment">+</div>
+					</div>
+					<div class="prices">
+						<div class="price"></div>
+						<div class="bold-price"></div>
+					</div>
+				</div>
 			</div>
 			<div class="ajax-loader">
 				<div></div>
@@ -674,7 +695,49 @@
 		</div>
 		<div class="col-xs-4 checkout-right">
 			<div class="checkout-sidebar">
-				
+				<div class="checkout-options">
+					<input type="checkbox" id="wash-everything">
+					<label for="wash-everything">Нужно постирать все вещи</label>
+					<input type="checkbox" id="strap-everything">
+					<label for="strap-everything">Добавить плечики для всех</label>
+				</div>
+				<div class="checkout-duration">
+					<h4>Как быстро нужно выполнить заказ:</h4>
+					<div class="duration-option">
+						<input type="radio" name="duration-option" value="Экспресс">
+						<div>
+							<label for="">до 12 часов</label>
+							<div class="description">
+								<h5>Экспресс</h5>
+								<span>+100% к сумме заказа</span>
+							</div>
+						</div>
+					</div>
+					<div class="duration-option">
+						<input type="radio" name="duration-option" value="Срочный">
+						<div>
+							<label for="">до 24 часов</label>
+							<div class="description">
+								<h5>Срочный</h5>
+								<span>+50% к сумме заказа</span>
+							</div>
+						</div>
+					</div>
+					<div class="duration-option">
+						<input type="radio" name="duration-option" value="Стандарт">
+						<div>
+							<label for="">до 48 часов</label>
+							<div class="description">
+								<h5>Стандарт</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="checkout-summary">
+					<div class="itogo">Итого: <span>21320</span></div>
+					<div class="next-step-button"><a href="checkout-step2.html" class="blue-button">ПРОДОЛЖИТЬ</a></div>
+					<div class="policy">Оформляя заказ, Вы принимаете<br><a href="#">условия заказа</a></div>
+				</div>
 			</div>
 		</div>
 	</div>
