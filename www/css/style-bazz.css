@@ -1,3 +1,14 @@
+span.summ:after {
+	font-family: PTRoubleSans, sans-serif;
+	content: '3';
+	padding-left: 3px;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
 .dashed-link {
 	display: inline-block;
 	color: #6581CC;
@@ -789,7 +800,7 @@
 	margin-top: 30px;
 	margin-bottom: 50px;
 	background: #F8F8F8;
-	padding: 40px 0;
+	padding: 40px;
 }
 	.methods .delivery,
 	.methods .payment {
@@ -842,12 +853,6 @@
 	height: 50px;
 	margin-bottom: 50px;
 }
-	.methods-buttons > div:first-child {
-		text-align: left;
-	}
-	.methods-buttons > div:last-child {
-		text-align: right;
-	}
 .methods .courier {
 	opacity: 0;
 	height: 0;
@@ -939,8 +944,388 @@
 			background: url('../images/info-ico.png') no-repeat center center;
 			vertical-align: middle;
 		}
+
+
+
+.breadcrumbs {
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 6px;
+	margin-bottom: 0;
+}
+	.breadcrumbs li {
+		display: inline-block;
+		font-size: 12px;
+		color: #424242;
+	}
+	.breadcrumbs li a {
+		font-size: 12px;
+	}
+.profile {
+	background: #FAFAFA;
+}
+	.profile-summary,
+	.profile-adress,
+	.profile-add-adress {
+		border-bottom: 1px solid #EEEEEE;
+		padding: 15px;
+	}
+	.profile-controls {
+		padding: 15px;
+		text-align: right;
+	}
+		.profile-controls a {
+			font-size: 12px;
+			color: #858585;
+			font-family: RobotoLight;
+			text-decoration: underline;
+		}
+	.profile-add-adress {
 		
+	}
+		.profile-add-adress a {
+			color: #6581CC;
+			text-decoration: underline;
+			font-size: 12px;
+		}
+	.profile-adress {
 		
+	}
+		.profile-adress span{
+			color: #424242;
+			font-size: 16px;
+		}
+		.profile-adress a {
+			font-size:  12px;
+			text-decoration: underline;
+			color: #858585;
+		}
+	.profile-name {
+		font-size: 20px;
+		font-family: NotoSerifBold;
+		color: #424242;
+		margin-bottom: 6px;
+	}
+	.profile-avatar {
+		width: 35%;
+		float: left;
+	}
+		.profile-avatar img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.3);
+		}
+	.profile-info {
+		width: 62%;
+		float: right;
+	}
+		.profile-info li {
+			font-size: 14px;
+			height: 24px;
+			color: #858585;
+		}
+		.profile-info li.info-phone {
+			padding-left: 23px;
+			background: url('../images/profile-info-ico.png') no-repeat left 5px;
+		}
+		.profile-info li.info-email {
+			padding-left: 23px;
+			background: url('../images/profile-info-ico.png') no-repeat left -21px;
+		}
+#add-adress {
+	background: #FFF;
+	padding: 30px;
+	box-shadow: inset 0px 1px 3px 0 rgba(0,0,0,0.3);
+	border-bottom: 1px solid #EEEEEE;
+	display: none;
+}
+	#add-adress input {
+		height: 40px;
+		width: 100%;
+		border: 1px solid #E0E0E0;
+		border-radius: 20px;
+		padding: 0 15px;
+		margin-bottom: 8px;
+	}
+	#add-adress input:nth-child(3),
+	#add-adress input:nth-child(4),
+	#add-adress input:nth-child(5),
+	#add-adress input:nth-child(6) {
+		width: calc(100% / 3 - 8px);
+		margin-right: 8px;
+	}
+	#add-adress input:nth-child(5) {
+		margin-right: 0;
+	}
+	#add-adress input[type="submit"] {
+		width: 50%;
+		float: right;
+		background: #6581CC;
+		border: none;
+		color: #FFF;
+		font-size: 15px;
+	}
+.profile-content {
+	padding: 0 30px;
+}
+	.profile-content h1,
+	.profile-content h2 {
+		font-size: 40px;
+		color:# #6581CC;
+		font-family: NotoSerifBold;
+		margin: 15px 0;
+	}
+	.profile-content h2 {
+		font-size: 25px;
+		margin-bottom: 0;
+	}
+	
+.my-orders {
+	
+}
+	.my-orders li,
+	.my-orders a,
+	.my-orders a span {
+		-webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		-o-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+	}
+	
+	.my-orders li {
+		background: #F6F6F6;
+		box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
+		display: inline-block;
+		vertical-align: top;
+		width: 160px;
+		height: 140px;
+		margin-right: 25px;
+	}
+		.my-orders li:hover {
+			background: #6581CC;
+		}
+	.my-orders a {
+		color: #9AABDB;
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 50px;
+		font-family: NotoSerifBold;
+		text-align: center;
+		padding-top: 10px;
+	}
+		.my-orders a span {
+			display: block;
+			color: #9AABDB;
+			font-size: 16px;
+			font-family: Roboto;
+			line-height: 1;
+		}
+		.my-orders li:hover a {
+			color: #FFF;
+		}
+		.my-orders li:hover a span {
+			color: #FFF;
+			text-decoration: underline;
+		}
+.cancelled-orders-link {
+	margin-top: -20px;
+	margin-bottom: 6px;
+}
+	.cancelled-orders-link a {
+		color: #6581CC;
+		font-size: 14px;
+		text-decoration: underline;
+	}
+.my-orders-filter {
+	background: #FAFAFA;
+	padding: 18px 30px;
+	padding-left: 3px;
+	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.3);
+	margin-bottom: 18px;
+}
+	.my-orders-filter > div {
+		display: inline-block;
+		position: relative;
+		color: #858585;
+	}
+	.my-orders-filter .from:before {
+		content: 'с';
+		position: absolute;
+		left: 20px;
+		top: 10px;
+	}
+	.my-orders-filter .to:before {
+		content: 'по';
+		position: absolute;
+		left: 20px;
+		top: 10px;
+	}
+	.my-orders-filter .calendar-ico {
+		position: absolute;
+		right: 10px;
+		top: calc(50% - 10px);
+		width: 17px;
+		height: 19px;
+		background: url('../images/calendar-ico.png') no-repeat center top;
+		cursor: pointer;
+	}
+		.my-orders-filter > div:hover .calendar-ico {
+			background-position: center bottom;
+		}
+	.my-orders-filter input {
+		width: 160px;
+		height: 40px;
+		border-radius: 20px;
+		padding: 0 40px;
+		color: #424242;
+		font-size: 15px;
+		border: none;
+		outline: none;
+		box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.3);
+		
+	}
+.dropdown-list {
+	float: right;
+}
+	.dropdown-list select {
+		width: 160px;
+		height: 40px;
+		border-radius: 20px;
+		padding-left: 20px;
+		color: #424242;
+		font-size: 15px;
+		border: none;
+		outline: none;
+		box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.3);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 0.01px; 
+		text-overflow: '';
+		-ms-appearance: none;
+		appearance: none!important;
+		background: url('../images/select-ico.png') no-repeat 130px center;
+	}
+    .dropdown-list  select::-ms-expand {
+      display: none;
+    }
+.my-orders-table {
+	margin-bottom: 40px;
+}
+	.my-orders-table table {
+		width: 100%;
+		border-collapse: collapse; 
+	}
+	.my-orders-table th {
+		background: #6581CC;
+		height: 50px;
+		padding: 0 15px;
+		color: #FFF;
+		border-right: 1px solid #FFF;
+		font-size: 13px;
+		text-align: left;
+	}
+	.my-orders-table td {
+		padding: 10px;
+		color: #424242;
+		font-family: RobotoLight;
+		border: 1px solid #EEEEEE;
+	}
+		.my-orders-table td:nth-child(1) {
+			color: #858585;
+			font-size: 12px;
+			font-family: Roboto;
+		}
+			.my-orders-table td:nth-child(1) a {
+				display: block;
+				font-size: 16px;
+				color: #6581CC;
+				text-decoration: underline;
+			}
+		.my-orders-table td:nth-child(2),
+		.my-orders-table td:nth-child(3) {
+			text-align: center;
+		}
+		.my-orders-table td:nth-child(4) span{
+			display: block;
+		}
+		.my-orders-table td:nth-child(5) {
+			color: #757575;
+			font-size: 12px;
+		}
+		.my-orders-table td:nth-child(5) > * {
+			display: block;
+		}
+		.my-orders-table td:nth-child(5) a {
+			font-size: 16px;
+			font-family: RobotoBold;
+			color: #FF4081;
+			text-decoration: underline;
+		}
+		.my-orders-table td:nth-child(5) a.restore-order {
+			font-family: Roboto;
+			font-size: 14px;
+			color: #6581CC;
+		}
+		.my-orders-table td:nth-child(5) strong {
+			font-size: 16px;
+			font-family: RobotoBold;
+		}
+.my-order-summary {
+	padding: 30px 20px;
+	background: #F6F6F6;
+	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.3);
+	margin-bottom: 18px;
+}
+	.my-order-summary ul {
+		margin-bottom: 30px;
+	}
+		.my-order-summary li {
+			position: relative;
+			font-size: 14px;
+			color: #424242;
+			margin-bottom: 10px;
+		}
+		.my-order-summary li:before {
+			content: '';
+			width: 100%;
+			height: 0px;
+			position: absolute;
+			left: 0;
+			bottom: 4px;
+			border-bottom: dotted 1px #9C9C9C;
+		}
+		.my-order-summary li > span {
+			position: relative;
+			display: inline-block;
+			background: #F6F6F6;
+			padding-right: 4px;
+			z-index: 1;
+		}
+		.my-order-summary li div {
+			width: 50%;
+			position: relative;
+			float: right;
+			background: #F6F6F6;
+			padding-left: 4px;
+			z-index: 1;
+		}
+			.my-order-summary li div strong,
+			.my-order-summary li div strong  span {
+				font-family: RobotoBold;
+			}
+			.my-order-summary li div strong  span:after {
+				content: '1';
+			}
+.get-invoice {
+	display: inline-block;
+	font-size: 14px;
+	color: #6581CC;
+	text-decoration: underline;
+	background: url('../images/get-invoice-ico.png') no-repeat right center;
+	padding-right: 35px;
+}
+	
+
 		
 		
 		

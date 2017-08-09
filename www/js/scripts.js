@@ -194,13 +194,26 @@ $(document).ready(function() {
 				$(this).siblings('button').removeClass('active');
 				$(this).addClass('active');
 				if( $(this).attr('id') == "opener" ) {
-					$(this).parent('.trigger-buttons').next('.courier').addClass('visible');
+					//$(this).parent('.trigger-buttons').next('.courier').addClass('visible');
 				} else {
-					$(this).parent('.trigger-buttons').next('.courier').removeClass('visible');
+					//$(this).parent('.trigger-buttons').next('.courier').removeClass('visible');
 				}
 			}
 		});
 	}
+	$('.profile-add-adress a').on('click', function(){
+		if ( ! $('#add-adress').is(':visible') ) {
+			$('#add-adress').slideDown();
+		} else {
+			$('#add-adress').slideUp();
+		}
+	});
+	$('.datepicker').datepicker({
+		dateFormat:   "dd.mm.yy",
+	});
+	$('.calendar-ico').on('click', function(){
+		$(this).siblings('input').focus();
+	});
 	
 });
 
