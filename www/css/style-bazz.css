@@ -9,6 +9,9 @@ span.summ:after {
 .align-right {
 	text-align: right;
 }
+.align-center {
+	text-align: center;
+}
 .dashed-link {
 	display: inline-block;
 	color: #6581CC;
@@ -354,7 +357,7 @@ span.summ:after {
 			.subcategory-item .description .title {
 				margin-bottom: 8px;
 			}
-			.subcategory-item .description .controls > div {
+			.controls > div {
 				width: 40px;
 				height: 40px;
 				display: inline-block;
@@ -369,31 +372,32 @@ span.summ:after {
 				-o-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 				transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 			}
-			.subcategory-item .description .controls .wash {
+			.controls .wash {
 				background-image: url('../images/wash-ico.svg#wash-grey');
 				background-size: 20px;
 			}
-			.subcategory-item .description .controls .strap {
+			.controls .strap {
 				background-image: url('../images/strap-ico.svg#strap-grey');
 				background-size: 26px;
 			}
-			.subcategory-item .description .controls > div:hover,
-			.subcategory-item .description .controls > div.active {
+			.controls > div:hover,
+			.controls > div.active {
 				background-color: #FF4081;
 				border-color: #FF4081;
 			}
-			.subcategory-item .description .controls .wash:hover,
-			.subcategory-item .description .controls .wash.active {
+			.controls .wash:hover,
+			.controls .wash.active {
 				background-image: url('../images/wash-ico.svg#wash-white');
 			}
-			.subcategory-item .description .controls .strap:hover,
-			.subcategory-item .description .controls .strap.active {
+			.controls .strap:hover,
+			.controls .strap.active {
 				background-image: url('../images/strap-ico.svg#strap-white');
 			}
 		.num {
 			text-align: center;
 			-ms-flex-item-align: end;
 			align-self: flex-end;
+			position: relative;
 		}
 			.num .increment,
 			.num .decrement {
@@ -1224,6 +1228,14 @@ span.summ:after {
 		font-size: 13px;
 		text-align: left;
 	}
+	.my-orders-table tbody tr {
+		-webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		-o-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+	}
+	.my-orders-table tbody tr:hover {
+		background-color: #FAFAFA;
+	}
 	.my-orders-table td {
 		padding: 10px;
 		color: #424242;
@@ -1270,6 +1282,22 @@ span.summ:after {
 			font-size: 16px;
 			font-family: RobotoBold;
 		}
+		.my-orders-table img {
+			width: auto;
+			height: auto;
+			max-height: 36px;
+			margin-right: 20px;
+			vertical-align: middle;
+		}
+		.my-orders-table.order-single td {
+			color: #424242;
+			font-family: Roboto;
+			font-size: 14px;
+		}
+		.my-orders-table.order-single td:nth-child(4) {
+			text-align: center;
+		}
+		
 .my-order-summary {
 	padding: 30px 20px;
 	background: #F6F6F6;
@@ -1293,6 +1321,11 @@ span.summ:after {
 			left: 0;
 			bottom: 4px;
 			border-bottom: dotted 1px #9C9C9C;
+		}
+		.my-order-summary li::after {
+			content: '';
+			clear: both;
+			display: block;
 		}
 		.my-order-summary li > span {
 			position: relative;
@@ -1324,6 +1357,128 @@ span.summ:after {
 	background: url('../images/get-invoice-ico.png') no-repeat right center;
 	padding-right: 35px;
 }
+.my-orders-table.order-single {
+	margin-bottom: 50px;
+}
+.my-order-comments {
+	margin-bottom: 40px;
+}
+#my-order-comments {
+	margin-bottom: 20px;
+}
+	#my-order-comments textarea {
+		display: block;
+		width: 100%;
+		height: 125px;
+		background: #FAFAFA;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.3);
+		box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.3);
+		border: none;
+		resize: none;
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+	#my-order-comments > div {
+		text-align: right;
+	}
+	#my-order-comments input[type="submit"] {
+		cursor: pointer;
+		height: 40px;
+		border-radius: 20px;
+		padding: 0 20px;
+		background: #6581CC;
+		border: none;
+		color: #FFF;
+		font-size: 15px;
+		text-transform: uppercase;
+	}
+.my-order-comments-list {
+	
+}
+	.my-order-comments-list li {
+		margin-bottom: 8px;
+		border-radius: 4px;
+		background: #F6F6F6;
+		padding: 30px;
+		box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.3);
+		color: #212121;
+	}
+		.my-order-comments-list li .author {
+			
+		}
+		.my-order-comments-list li .author.author-me {
+			
+		}
+		.my-order-comments-list li .author.author-manager {
+			color: #6581CC;
+		}
+		.my-order-comments-list li .date {
+			color: #858585;
+			font-size: 12px;
+			margin-bottom: 16px;
+		}
+
+
+.cart {
+	
+}
+	.cart h1 {
+		padding-top: 15px;
+		color: #6581CCl;
+		font-size: 25px;
+		text-align: center;
+		font-family: NotoSerifBold;
+		margin-bottom: 20px;
+	}
+	.cart .title {
+		font-size: 20px;
+		font-family: NotoSerifBold;
+		margin-bottom: 10px;
+		color: #424242;
+	}
+	.cart .spoiler {
+		color: #424242;
+	}
+		.cart .spoiler > span {
+			font-size: 16px;
+			font-family: NotoSerifBold;
+			display: inline-block;
+			padding-right: 20px;
+			position: relative;
+			margin-bottom: 6px;
+			color: #424242;
+		}
+			.cart .spoiler > span:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 11px;
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-top: 5px solid #899FD8;
+			}
+	.cart .my-orders-table td:last-child {
+		text-align: center;
+	}
+	.cart .num {
+		width: 125px;
+		margin: 0 auto;
+	}
+.cart-summary {
+	padding: 30px;
+	margin-bottom: 15px;
+	background: #F6F6F6;
+	border-radius: 4px;
+	box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.3);
+}
+	.cart .policy {
+		font-size: 14px;
+		font-family: RobotoLight;
+		color: #858585;
+		margin-bottom: 30px;
+	}
 	
 
 		

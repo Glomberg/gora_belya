@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Оформление заказа</title>
+	<title>Профиль - заказ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.grid.css" rel="stylesheet">
@@ -221,7 +221,9 @@
 		<nav class="col-xs-12 breadcrumbs">
 			<ul>
 				<li><a href="">Главная</a></li>
-				<li>Личный кабинет</li>
+				<li><a href="">Личный кабинет</a></li>
+				<li><a href="">Мои заказы</a></li>
+				<li>Заказ №ID123456</li>
 			</ul>
 		</nav>
 	</div>
@@ -286,7 +288,7 @@
 				</ul>
 				<a href="#" class="get-invoice">Счет на оплату</a>
 			</div>
-			<div class="my-orders-table">
+			<div class="my-orders-table order-single">
 				<table>
 					<thead>
 						<tr>
@@ -298,25 +300,54 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>
+								<img src="images/icons/t-shirt_m.png" alt="Футболка/майка">
+								Футболка / майка
+							</td>
+							<td>Стирка, глажка</td>
+							<td>4</td>
+							<td><span class="summ">280</span></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>
+								<img src="images/icons/shirt_m.png" alt="Футболка/майка">
+								Футболка с длинным рукавом
+							</td>
+							<td>Стирка, глажка</td>
+							<td>4</td>
+							<td><span class="summ">280</span></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>
+								<img src="images/icons/polo_m.png" alt="Футболка/майка">
+								Поло (футболка с воротником)
+							</td>
+							<td>Стирка, глажка, плечики</td>
+							<td>4</td>
+							<td><span class="summ">280</span></td>
 						</tr>
 					</tbody>
 				</table>
+			</div>
+			<div class="my-order-comments">
+				<form action="/" id="my-order-comments">
+					<textarea name="" placeholder="Добавить комментарий"></textarea>
+					<div>
+						<input type="submit" value="Отправить">
+					</div>
+				</form>
+				<ul class="my-order-comments-list">
+					<li>
+						<div class="author author-manager">Менеджер сервиса чистого белья «Легкий день»</div>
+						<div class="date">9 июня 2017</div>
+						<div class="text">Перезвонили, вопрос решили, доставка перенесена на 12 июня с 13 до 14. </div>
+					</li>
+					<li>
+						<div class="author author-me">Я</div>
+						<div class="date">9 июня 2017</div>
+						<div class="text">Здравствуйте, можно перенести доставку курьром на другой день?</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

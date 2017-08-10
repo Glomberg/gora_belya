@@ -115,14 +115,14 @@ $(document).ready(function() {
 	
 	if ( $('.subcategory-item').length >= 1 ) {
 		check_prices();
-		$('.subcategory-item .description .controls > div').on('click', function(){
-			if( $(this).hasClass('active') ) {
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');
-			}
-		});
 	}
+	$('.controls > div').on('click', function(){
+		if( $(this).hasClass('active') ) {
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		}
+	});
 	
 	$('.increment').on('click', function(){
 		var count = $(this).siblings('input').val();

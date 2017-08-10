@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Профиль - отмененные заказы</title>
+	<title>Корзина</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.grid.css" rel="stylesheet">
@@ -216,130 +216,203 @@
 </header>
 
 <!-- CONTENT  -->
-<div class="container">
+<div class="container cart">
 	<div class="row">
 		<nav class="col-xs-12 breadcrumbs">
 			<ul>
 				<li><a href="">Главная</a></li>
-				<li>Личный кабинет</li>
+				<li><a href="">Оформить заказ</a></li>
+				<li>Корзина</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="row">
-		<div class="col-xs-4 profile">
-			<div class="profile-summary">
-				<div class="profile-name">Лескова Светлана</div>
-				<div class="profile-avatar">
-					<img src="images/avatar.jpg" alt="Avatar">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-8">
+			<h1>Корзина</h1>
+			<div class="title">Поштучный заказ</div>
+			<div class="spoiler">
+				<span>Мужская одежда</span>
+				<div class="spoiler-content">
+					<div class="my-orders-table">
+						<table>
+							<thead>
+								<tr>
+									<th>Наименование изделия</th>
+									<th>Услуги</th>
+									<th>Количество</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="images/icons/t-shirt_m.png" alt="Футболка/майка">
+										Футболка / майка
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+											<div class="num">
+												<div class="decrement">-</div>
+												<input type="text">
+												<div class="increment">+</div>
+											</div>
+										</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/icons/shirt_m.png" alt="Футболка/майка">
+										Футболка с длинным рукавом
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+											<div class="num">
+												<div class="decrement">-</div>
+												<input type="text">
+												<div class="increment">+</div>
+											</div>
+										</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/icons/polo_m.png" alt="Футболка/майка">
+										Поло (футболка с воротником)
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+											<div class="num">
+												<div class="decrement">-</div>
+												<input type="text">
+												<div class="increment">+</div>
+											</div>
+										</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-				<div class="profile-info">
-					<ul>
-						<li>Номер клиента: 1235</li>
-						<li></li>
-						<li class="info-phone">8 (914) 123-1-123</li>
-						<li class="info-email">example@mail.ru</li>
-						<li>Дата рождения: 29.11.1982</li>
-						
-					</ul>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-			<div class="profile-adress">
-				<span>г. Магадан, ул. Гагарина, д. 24, корп. 2, подъезд 2, кв. 13</span>
-				<div><a href="javascript:void(0)">редактировать адрес</a></div>
-			</div>
-			<div class="profile-add-adress">
-				<div><a href="javascript:void(0)">Добавить адрес</a></div>
-			</div>
-			<form action="/" id="add-adress">
-				<input type="text" placeholder="Населенный пункт">
-				<input type="text" placeholder="улица">
-				<input type="text" placeholder="дом">
-				<input type="text" placeholder="корп.">
-				<input type="text" placeholder="подъезд">
-				<input type="text" placeholder="кварт.">
-				<input type="submit" value="ДОБАВИТЬ">
-			</form>
-			<div class="profile-controls">
-				<div>
-					<a href="profile-edit.html">Редактировать данные</a>
+			<div class="spoiler">
+				<span>Женская одежда</span>
+				<div class="spoiler-content">
+					<div class="my-orders-table">
+						<table>
+							<thead>
+								<tr>
+									<th>Наименование изделия</th>
+									<th>Услуги</th>
+									<th>Количество</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="images/icons/t-shirt_m.png" alt="Футболка/майка">
+										Футболка / майка
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+										<div class="num">
+											<div class="decrement">-</div>
+											<input type="text">
+											<div class="increment">+</div>
+										</div>
+									</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/icons/shirt_m.png" alt="Футболка/майка">
+										Футболка с длинным рукавом
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+										<div class="num">
+											<div class="decrement">-</div>
+											<input type="text">
+											<div class="increment">+</div>
+										</div>
+									</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/icons/polo_m.png" alt="Футболка/майка">
+										Поло (футболка с воротником)
+									</td>
+									<td>
+										<div class="controls">
+											<div class="wash"></div>
+											<div class="strap"></div>
+										</div>
+									</td>
+									<td>
+										<div class="num">
+											<div class="decrement">-</div>
+											<input type="text">
+											<div class="increment">+</div>
+										</div>
+									</td>
+									<td><span class="summ">280</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-				<div>
-					<a href="profile-change-password.html">Изменить пароль</a>
+			</div>
+			<div class="row">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10 cart-summary">
+					
 				</div>
+				<div class="col-xs-1"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 align-center">
+					<div class="policy">Оформляя заказ, Вы принимаете <a href="#">условия заказа</a></div>
+				</div>
+			</div>
+			<div class="row methods-buttons">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-5 align-left">
+					<a href="checkout.html" class="grey-button">НАЗАД</a>
+				</div>
+				<div class="col-xs-5 align-right">
+					<a href="#" class="blue-button">ПОДТВЕРДИТЬ ЗАКАЗ</a>
+				</div>
+				<div class="col-xs-1"></div>
 			</div>
 		</div>
-		<div class="col-xs-8 profile-content">
-			<h2>Отмененные заказы</h2>
-			<div class="cancelled-orders-link align-right">
-				<a href="profile-my-orders.html">Мои заказы</a>
-			</div>
-			<div class="my-orders-filter">
-				<div class="from">
-					<input class="datepicker" type="text">
-					<div class="calendar-ico"></div>
-				</div>
-				<span>&nbsp;&ndash;&nbsp;</span>
-				<div class="to">
-					<input class="datepicker" type="text">
-					<div class="calendar-ico"></div>
-				</div>
-			</div>
-			<div class="my-orders-table">
-				<table>
-					<thead>
-						<tr>
-							<th>Заказ</th>
-							<th>Сумма заказа</th>
-							<th>Позиций, шт.</th>
-							<th>Опции</th>
-							<th>Статус</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="profile-order.html">№ID123456</a>от 12.12.2012</td>
-							<td><span class="summ">4350</span></td>
-							<td>12</td>
-							<td>
-								<span>Привезу сам</span>
-								<span>Доставка курьером</span>
-								<span>Предоплата онлайн</span>
-							</td>
-							<td>
-								<a href="#" class="restore-order">Возобновить</a>
-							</td>
-						</tr>
-						<tr>
-							<td><a href="profile-order.html">№ID123456</a>от 12.12.2012</td>
-							<td><span class="summ">4350</span></td>
-							<td>12</td>
-							<td>
-								<span>Привезу сам</span>
-								<span>Доставка курьером</span>
-								<span>Предоплата онлайн</span>
-							</td>
-							<td>
-								<a href="#" class="restore-order">Возобновить</a>
-							</td>
-						</tr>
-						<tr>
-							<td><a href="profile-order.html">№ID123456</a>от 12.12.2012</td>
-							<td><span class="summ">4350</span></td>
-							<td>12</td>
-							<td>
-								<span>Привезу сам</span>
-								<span>Доставка курьером</span>
-								<span>Предоплата онлайн</span>
-							</td>
-							<td>
-								<a href="#" class="restore-order">Возобновить</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
+		<div class="col-xs-2"></div>
 	</div>
 </div>
 <!-- /CONTENT -->
