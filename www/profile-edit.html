@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Оформление заказа - безлимит</title>
+	<title>Профиль - изменить данные</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.grid.css" rel="stylesheet">
@@ -12,6 +12,9 @@
 	<link href="js/owl/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="js/owl/assets/owl.theme.default.css" rel="stylesheet">
 	<script src="js/owl/owl.carousel.min.js" type="text/javascript"></script>
+	
+	<link href="js/datepicker/datepicker.min.css" rel="stylesheet">
+	<script src="js/datepicker/datepicker.min.js" type="text/javascript"></script>
 	
 	<script src="js/scripts.js" type="text/javascript"></script>
 	<link href="css/style-bazz.css" rel="stylesheet">
@@ -213,105 +216,41 @@
 </header>
 
 <!-- CONTENT  -->
-<div class="checkout-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="checkout-header-steps active">
-					<div class="checkout-header-steps-number">1</div>
-					<div>
-						<div class="checkout-header-steps-title">Мы рассортируем ваши вещи</div>
-						<div class="checkout-header-steps-description">или <a href="checkout.html" class="dashed-link">составьте список сами</a></div>
-					</div>
-				</div>
-				<div class="checkout-header-steps">
-					<div class="checkout-header-steps-number">2</div>
-					<div>
-						<div class="checkout-header-steps-title">Оплата, доставка</div>
-						<div class="checkout-header-steps-description">Выберите способ удобный для вас</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
+<div class="container edit-profile">
 	<div class="row">
-		<div class="col-xs-12 unlimited-header">
-			<img src="images/unlim-ico.svg#grey" alt="">
-			<div>
-				<span>Укажите примерный вес заказа:</span>
-				<div class="num">
-					<div class="decrement">-</div>
-					<input type="text">
-					<div class="increment">+</div>
-				</div>
-				<span>кг.</span>
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4">
+			<div class="unlimited-header">
+				<img src="images/unlim-ico.svg#blue" alt="">
 			</div>
-		</div>
-		<div class="col-xs-12 unlimited-body">
-			<div class="row">
-				<div class="col-xs-2"></div>
-				<div class="col-xs-8 row checkout-sidebar">
-					<div class="col-xs-6">
-						<div class="checkout-duration">
-							<h4>Как быстро нужно выполнить заказ:</h4>
-							<div class="duration-option">
-								<input type="radio" name="duration-option" value="Экспресс">
-								<div>
-									<label for="">до 12 часов</label>
-									<div class="description">
-										<h5>Экспресс</h5>
-										<span>+100% к сумме заказа</span>
-									</div>
-								</div>
-							</div>
-							<div class="duration-option">
-								<input type="radio" name="duration-option" value="Срочный">
-								<div>
-									<label for="">до 24 часов</label>
-									<div class="description">
-										<h5>Срочный</h5>
-										<span>+50% к сумме заказа</span>
-									</div>
-								</div>
-							</div>
-							<div class="duration-option">
-								<input type="radio" name="duration-option" value="Стандарт">
-								<div>
-									<label for="">до 48 часов</label>
-									<div class="description">
-										<h5>Стандарт</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="checkout-options">
-							<input type="checkbox" id="wash-everything">
-							<label for="wash-everything">Нужно постирать все вещи</label>
-							<input type="checkbox" id="strap-everything">
-							<label for="strap-everything">Добавить плечики для всех</label>
-						</div>
-						<div class="checkout-summary">
-							<div class="itogo">Предоплата: <span>500</span></div>
-							<div class="poditogo">Примерная стоимость: <span>3600</span></div>
-						</div>
+			<div class="edit-description">В форме ниже вы можете изменить данные, указанные при регистрации</div>
+			<form action="/" class="edit-form">
+				<div class="edit-form-name">
+					<input type="text" placeholder="Лескова Светлана">
+				</div>
+				<div class="edit-form-email">
+					<input type="text" placeholder="example@mail.com">
+				</div>
+				<div class="edit-form-date">
+					<input type="text" class="datepicker" placeholder="10.08.2017">
+					<span>если хотите получать скидки в свой день рождения</span>
+				</div>
+				<div class="edit-form-phone">
+					<input type="text" placeholder="+7(111)1111111">
+					<span>номер телефона для оповещений </span>
+				</div>
+				<div class="edit-form-pass">
+					<input type="text" placeholder="Пароль">
+					<span>Подтвердите, что вы владелец аккаунта</span>
+				</div>
+				<div class="methods-buttons">
+					<div class="align-center">
+						<a href="#" class="blue-button">ИЗМЕНИТЬ ДАННЫЕ</a>
 					</div>
 				</div>
-				<div class="col-xs-2"></div>
-				<div class="clearfix"></div>
-			</div>
+			</form>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="unlimited-button">
-				<div class="policy"><span></span>Оформляя заказ, Вы принимаете <a href="#">условия заказа</a></div>
-				<a href="#" class="blue-button">ПРОДОЛЖИТЬ</a>
-			</div>
-		</div>
+		<div class="col-xs-4"></div>
 	</div>
 </div>
 <!-- /CONTENT -->

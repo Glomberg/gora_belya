@@ -1481,6 +1481,118 @@ span.summ:after {
 	}
 	
 
+.edit-form {
+	
+}
+.edit-form > div {
+	position: relative;
+}
+.edit-form > div:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.edit-form input{
+	height: 40px;
+	width: 100%;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	border: 1px solid #E0E0E0;
+	padding-left: 40px;
+}
+.edit-form span {
+	display: block;
+	width: calc(50% - 10px);
+	float: right;
+	color: #858585;
+	font-size: 12px;
+}
+.edit-form .edit-form-name:before,
+.edit-form .edit-form-email:before,
+.edit-form .edit-form-date:before,
+.edit-form .edit-form-phone:before,
+.edit-form .edit-form-pass:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: url('../images/edit-form-icons.png') no-repeat center top;
+}
+.edit-form .edit-form-name:before {
+	background-position: center top;
+}
+.edit-form .edit-form-email:before {
+	background-position: center -51px;
+}
+.edit-form .edit-form-date:before {
+	background-position: center -132px;
+}
+.edit-form .edit-form-phone:before {
+	background-position: center -181px;
+}
+.edit-form .edit-form-pass:before {
+	background-position: center bottom;
+}
+.edit-form .methods-buttons {
+	border-top: 1px solid #EEEEEE;
+	padding: 40px 0;
+}
+
+.edit-description {
+	color: #858585;
+	text-align: center;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #EEEEEE;
+	margin-bottom: 40px;
+}
+
+.edit-profile {
+	
+}
+	.edit-profile form > div:nth-child(2),
+	.edit-profile form > div:nth-child(4),
+	.edit-profile form > div:nth-child(5){
+		margin-bottom: 40px;
+	}
+	.edit-profile form > div:nth-child(3) input,
+	.edit-profile form > div:nth-child(4) input,
+	.edit-profile form > div:nth-child(5) input{
+		width: calc(50% - 10px);
+	}
+	.edit-profile form > div:nth-child(5):after {
+		content: '*';
+		color: #FF4081;
+		position: absolute;
+		top: 0;
+		left: calc(50% - 10px);
+	}
+.edit-pass {
+	padding-bottom: 100px;
+}
+	.edit-pass .edit-description {
+		border: none;
+	}
+	.edit-pass .edit-form input {
+		margin-bottom: 20px;
+	}
+	.edit-pass .methods-buttons {
+		border: none;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	.edit-pass .forgot-pass a {
+		color: #858585;
+		font-size: 12px;
+		font-family: RobotoLight;
+		text-decoration: underline;
+	}
+		
+	
+	
+
 		
 		
 		
