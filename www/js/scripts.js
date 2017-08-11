@@ -71,7 +71,7 @@ $(document).ready(function() {
 		$('.owl-carousel').owlCarousel({
 			responsive:{
 				0 : {
-					items: 6
+					items: 0
 				},
 				320 : {
 					items: 3
