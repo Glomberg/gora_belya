@@ -67,29 +67,47 @@ $(document).ready(function() {
 		$(this).toggleClass('active').find('+ .category-wrapper').stop(false, false).slideToggle();
 	});
 	
-	if ( $('.owl-carousel').length >= 1 ) {
-		$('.owl-carousel').owlCarousel({
-			responsive:{
-				0 : {
-					items: 0
+	if ( $(window).width() > 320 || screen.width > 320 ) {
+		if ( $('.owl-carousel').length >= 1) {
+			$('.owl-carousel').owlCarousel({
+				responsive:{
+					0 : {
+						items: 0
+					},
+					320 : {
+						items: 3
+					},
+					480: {
+						items: 5
+					},
+					768: {
+						items: 5
+					},
+					970: {
+						items: 6
+					},
 				},
-				320 : {
-					items: 3
-				},
-				480: {
-					items: 5
-				},
-				768: {
-					items: 5
-				},
-				970: {
-					items: 6
-				},
-			},
-			loop:      false,
-			nav:       true,
-			navText:   ["", ""],
-			mouseDrag: false,
+				loop:      false,
+				nav:       true,
+				navText:   ["", ""],
+				mouseDrag: false,
+			});
+		}
+	} else {
+		$('.owl-trigger').on('click', function(){
+			if ( ! $('.owl-carousel').is(':visible') ) {
+				$('.owl-carousel').slideDown();
+			} else {
+				$('.owl-carousel .carousel-item').on('click', function(){
+					$('.owl-carousel').slideUp();
+				});
+				$('.owl-carousel').slideUp();
+			}
+		});
+		$('.owl-carousel .carousel-item').on('click', function(){
+			if ( $('.owl-carousel').is(':visible') ) {
+				$('.owl-carousel').slideUp();
+			}
 		});
 	}
 	
@@ -189,14 +207,15 @@ $(document).ready(function() {
 	}
 	
 	if ( $('.methods').length >= 1 ) {
-		$('.trigger-buttons button').on('click', function(){
-			if ( ! $(this).hasClass('active') ) {
-				$(this).siblings('button').removeClass('active');
-				$(this).addClass('active');
-				if( $(this).attr('id') == "opener" ) {
-					//$(this).parent('.trigger-buttons').next('.courier').addClass('visible');
+		if ( $('input[id="delivery-variant-courier"]').is(':checked') ) {
+			$('.delivery-form').slideDown();
+		}
+		$('.trigger-buttons input').on('change', function(e){
+			if ( $(e.target).attr('name') == "delivery-variant" ) {
+				if( $(this).attr('id') == "delivery-variant-courier" ) {
+					$('.delivery-form').slideDown();
 				} else {
-					//$(this).parent('.trigger-buttons').next('.courier').removeClass('visible');
+					$('.delivery-form').slideUp();
 				}
 			}
 		});
@@ -208,12 +227,15 @@ $(document).ready(function() {
 			$('#add-adress').slideUp();
 		}
 	});
-	$('.datepicker').datepicker({
-		dateFormat:   "dd.mm.yy",
-	});
-	$('.calendar-ico').on('click', function(){
-		$(this).siblings('input').focus();
-	});
+	if ( $('.datepicker').length >= 1  ) {
+		$('.datepicker').datepicker({
+			dateFormat:   "dd.mm.yy",
+		});
+		$('.calendar-ico').on('click', function(){
+			$(this).siblings('input').focus();
+		});		
+	}
+		
 	
 });
 
