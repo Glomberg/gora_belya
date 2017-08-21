@@ -84,8 +84,11 @@ $(document).ready(function() {
 						items: 5
 					},
 					970: {
-						items: 6
+						items: 5
 					},
+					1200: {
+						items: 6
+					}
 				},
 				loop:      false,
 				nav:       true,
@@ -235,6 +238,21 @@ $(document).ready(function() {
 			$(this).siblings('input').focus();
 		});		
 	}
+	
+	/* Это удалить в релизе */
+	$('.carousel-item').on('click', function(){
+		$('.subcategory-item').remove();
+		$.ajax({
+			url : 'list.html',
+			dataType : 'html',
+			success : function(data){
+				var count = Math.floor((Math.random() * 10) + 1);
+				for ( var i = 0; i <= count; i++ ) {
+					$('.subcategory-list').append(data).hide().fadeIn();
+				}
+			}
+		});
+	});
 		
 	
 });
