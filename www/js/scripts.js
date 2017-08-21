@@ -142,7 +142,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('.increment').on('click', function(){
+	$('body').on('click', '.increment', function(){
 		var count = $(this).siblings('input').val();
 		if ( count == "" || count < 0 ) {
 			$(this).siblings('input').val(0);
@@ -151,7 +151,7 @@ $(document).ready(function() {
 		}
 		calculate();
 	});
-	$('.decrement').on('click', function(){
+	$('body').on('click', '.decrement', function(){
 		var count = $(this).siblings('input').val();
 		if ( count == "" || count < 0 ) {
 			$(this).siblings('input').val(0);
@@ -161,7 +161,7 @@ $(document).ready(function() {
 		}
 		calculate();
 	});
-	$('.num input').on('keyup', function(){
+	$('body').on('keyup', '.num input', function(){
 		if ( $(this).val() < 0  ) {
 			$(this).val(0);
 		}			

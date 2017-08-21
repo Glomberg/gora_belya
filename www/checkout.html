@@ -216,7 +216,8 @@
 <div class="checkout-header">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8">
 				<div class="checkout-header-steps active">
 					<div class="checkout-header-steps-number">1</div>
 					<div>
@@ -232,6 +233,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-xs-2"></div>
 		</div>
 	</div>
 </div>
@@ -690,8 +692,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="ajax-loader">
-				<div></div>
+			<div id="preloader">
+				<div class="f_circleG" id="frotateG_01"></div>
+				<div class="f_circleG" id="frotateG_02"></div>
+				<div class="f_circleG" id="frotateG_03"></div>
+				<div class="f_circleG" id="frotateG_04"></div>
+				<div class="f_circleG" id="frotateG_05"></div>
+				<div class="f_circleG" id="frotateG_06"></div>
+				<div class="f_circleG" id="frotateG_07"></div>
+				<div class="f_circleG" id="frotateG_08"></div>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-4 checkout-right">
@@ -705,9 +714,9 @@
 				<div class="checkout-duration">
 					<h4>Как быстро нужно выполнить заказ:</h4>
 					<div class="duration-option">
-						<input type="radio" name="duration-option" value="Экспресс">
+						<input type="radio" name="duration-option" value="Экспресс" id="duration-option-express">
 						<div>
-							<label for="">до 12 часов</label>
+							<label for="duration-option-express">до 12 часов</label>
 							<div class="description">
 								<h5>Экспресс</h5>
 								<span>+100% к сумме заказа</span>
@@ -715,9 +724,9 @@
 						</div>
 					</div>
 					<div class="duration-option">
-						<input type="radio" name="duration-option" value="Срочный">
+						<input type="radio" name="duration-option" value="Срочный" id="duration-option-fast">
 						<div>
-							<label for="">до 24 часов</label>
+							<label for="duration-option-fast">до 24 часов</label>
 							<div class="description">
 								<h5>Срочный</h5>
 								<span>+50% к сумме заказа</span>
@@ -725,9 +734,9 @@
 						</div>
 					</div>
 					<div class="duration-option">
-						<input type="radio" name="duration-option" value="Стандарт">
+						<input type="radio" name="duration-option" value="Стандарт" id="duration-option-standart">
 						<div>
-							<label for="">до 48 часов</label>
+							<label for="duration-option-standart">до 48 часов</label>
 							<div class="description">
 								<h5>Стандарт</h5>
 							</div>
