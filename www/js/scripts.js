@@ -230,9 +230,53 @@ $(document).ready(function() {
 			$('#add-adress').slideUp();
 		}
 	});
-	if ( $('.datepicker').length >= 1  ) {
+	
+	if ( $('.datepicker, .datepicker-2').length >= 1  ) {
+		/* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+		/* Written by Andrew Stromnov (stromnov@gmail.com). */
+		( function( factory ) {
+			if ( typeof define === "function" && define.amd ) {
+
+				// AMD. Register as an anonymous module.
+				define( [ "../widgets/datepicker" ], factory );
+			} else {
+
+				// Browser globals
+				factory( jQuery.datepicker );
+			}
+		}( function( datepicker ) {
+
+		datepicker.regional.ru = {
+			closeText: "Закрыть",
+			prevText: "&#x3C;Пред",
+			nextText: "След&#x3E;",
+			currentText: "Сегодня",
+			monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
+			"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
+			monthNamesShort: [ "января","февраля","марта","апреля","мая","июня",
+			"июля","августа","сентября","октября","ноября","декабря" ],
+			dayNames: [ "Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота" ],
+			dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
+			dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
+			weekHeader: "Нед",
+			dateFormat: "dd.mm.yy",
+			firstDay: 1,
+			isRTL: false,
+			showMonthAfterYear: false,
+			yearSuffix: "" };
+		datepicker.setDefaults( datepicker.regional.ru );
+
+		return datepicker.regional.ru;
+
+		} ) );
+
+		
+		$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 		$('.datepicker').datepicker({
 			dateFormat:   "dd.mm.yy",
+		});
+		$('.datepicker-2').datepicker({
+			dateFormat:   "d M, DD",
 		});
 		$('.calendar-ico').on('click', function(){
 			$(this).siblings('input').focus();
