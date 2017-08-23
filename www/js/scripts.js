@@ -283,6 +283,21 @@ $(document).ready(function() {
 		});		
 	}
 	
+	/* Перемещение кнопок способа оплаты при разных разрешениях */
+	if ( $('#float-element').length >= 1 ) {
+		$(window).resize(function(){
+			if( $(window).width() < 768 || screen.width < 768 ) {
+				if ( $('#for-small').find('#float-element').length < 1 ) {
+					$('#float-element').appendTo('#for-small');
+				}
+			} else {
+				if ( $('#for-large').find('#float-element').length < 1 ) {
+					$('#float-element').appendTo('#for-large');
+				}
+			}
+		});
+	}
+	
 	/* Это удалить в релизе */
 	$('.carousel-item').on('click', function(){
 		$('.subcategory-item').remove();
