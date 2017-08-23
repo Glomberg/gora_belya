@@ -284,18 +284,27 @@ $(document).ready(function() {
 	}
 	
 	/* Перемещение кнопок способа оплаты при разных разрешениях */
-	if ( $('#float-element').length >= 1 ) {
-		$(window).resize(function(){
-			if( $(window).width() < 768 || screen.width < 768 ) {
-				if ( $('#for-small').find('#float-element').length < 1 ) {
-					$('#float-element').appendTo('#for-small');
-				}
-			} else {
-				if ( $('#for-large').find('#float-element').length < 1 ) {
-					$('#float-element').appendTo('#for-large');
-				}
+	function check_position() {
+		if( $(window).width() < 768 || screen.width < 768 ) {
+			if ( $('#for-small').find('#float-element').length < 1 ) {
+				$('#float-element').appendTo('#for-small');
 			}
+		} else {
+			if ( $('#for-large').find('#float-element').length < 1 ) {
+				$('#float-element').appendTo('#for-large');
+			}
+		}
+	}
+	if ( $('#float-element').length >= 1 ) {
+		check_position();
+		$(window).resize(function(){
+			check_position();
 		});
+	}
+	
+	/* Укорачиваем текст в кнопке */
+	if ( $(window).width() < 480 || screen.width < 480 ) {
+		$('.cart a.blue-button').text('ПОДТВЕРДИТЬ');
 	}
 	
 	/* Это удалить в релизе */

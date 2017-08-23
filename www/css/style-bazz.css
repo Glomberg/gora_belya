@@ -1249,6 +1249,9 @@ span.summ.summ-bold:after {
 		font-family: RobotoLight;
 	}
 .profile {
+	padding-right: 20px
+}
+.profile > div {
 	background: #FAFAFA;
 	margin-bottom: 50px;
 	box-shadow: 0 1px 3px -2px rgba(0,0,0,0.45);
@@ -1257,10 +1260,10 @@ span.summ.summ-bold:after {
 	.profile-adress,
 	.profile-add-adress {
 		border-bottom: 1px solid #EEEEEE;
-		padding: 15px;
+		padding: 24px 20px 9px;
 	}
 	.profile-controls {
-		padding: 15px;
+		padding: 10px 20px;
 		text-align: right;
 	}
 		.profile-controls a {
@@ -1278,7 +1281,7 @@ span.summ.summ-bold:after {
 			font-size: 12px;
 		}
 	.profile-adress {
-		
+		padding-top: 15px;
 	}
 		.profile-adress span{
 			color: #424242;
@@ -1293,10 +1296,10 @@ span.summ.summ-bold:after {
 		font-size: 20px;
 		font-family: NotoSerifBold;
 		color: #424242;
-		margin-bottom: 6px;
+		margin-bottom: 9px;
 	}
 	.profile-avatar {
-		width: 35%;
+		width: 105px;
 		float: left;
 	}
 		.profile-avatar img {
@@ -1306,14 +1309,18 @@ span.summ.summ-bold:after {
 			box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.3);
 		}
 	.profile-info {
-		width: 62%;
+		width: calc(100% - 120px);
 		float: right;
+		margin-top: -6px;
 	}
 		.profile-info li {
 			font-size: 14px;
-			height: 24px;
 			color: #858585;
+			margin-bottom: 8px;
 		}
+			.profile-info li:first-child {
+				margin-bottom: 23px;
+			}
 		.profile-info li.info-phone {
 			padding-left: 23px;
 			background: url('../images/profile-info-ico.png') no-repeat left 5px;
@@ -1324,7 +1331,7 @@ span.summ.summ-bold:after {
 		}
 #add-adress {
 	background: #FFF;
-	padding: 30px;
+	padding: 30px 45px 20px 32px;
 	box-shadow: inset 0px 1px 3px 0 rgba(0,0,0,0.3);
 	border-bottom: 1px solid #EEEEEE;
 	display: none;
@@ -1334,8 +1341,8 @@ span.summ.summ-bold:after {
 		width: 100%;
 		border: 1px solid #E0E0E0;
 		border-radius: 20px;
-		padding: 0 15px;
-		margin-bottom: 8px;
+		padding: 0 20px;
+		margin-bottom: 10px;
 	}
 	#add-adress input:nth-child(3),
 	#add-adress input:nth-child(4),
@@ -1356,22 +1363,23 @@ span.summ.summ-bold:after {
 		font-size: 15px;
 	}
 .profile-content {
-	padding: 0 30px;
+	padding: 0 10px;
 }
 	.profile-content h1,
 	.profile-content h2 {
 		font-size: 40px;
 		color:# #6581CC;
 		font-family: NotoSerifBold;
-		margin: 15px 0;
+		margin: 19px 0 27px;
 	}
 	.profile-content h2 {
 		font-size: 25px;
 		margin-bottom: 0;
+		margin-top: 24px;
 	}
 	
 .my-orders {
-	
+	margin-bottom: 25px;
 }
 	.my-orders li,
 	.my-orders a,
@@ -1386,7 +1394,7 @@ span.summ.summ-bold:after {
 		box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
 		display: inline-block;
 		vertical-align: top;
-		width: 160px;
+		width: 164px;
 		height: 140px;
 		margin-right: 25px;
 	}
@@ -1401,7 +1409,7 @@ span.summ.summ-bold:after {
 		font-size: 50px;
 		font-family: NotoSerifBold;
 		text-align: center;
-		padding-top: 10px;
+		padding-top: 14px;
 	}
 		.my-orders a span {
 			display: block;
@@ -1428,10 +1436,10 @@ span.summ.summ-bold:after {
 	}
 .my-orders-filter {
 	background: #FAFAFA;
-	padding: 18px 30px;
+	padding: 25px 30px;
 	padding-left: 3px;
 	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.3);
-	margin-bottom: 18px;
+	margin-bottom: 19px;
 }
 	.my-orders-filter > div {
 		display: inline-block;
@@ -1500,7 +1508,6 @@ span.summ.summ-bold:after {
     }
 .my-orders-table {
 	margin-bottom: 22px;
-	padding: 0px 5px;
 }
 	.my-orders-table table {
 		width: 100%;
@@ -1617,6 +1624,19 @@ span.summ.summ-bold:after {
 		.my-orders-table.order-single td:nth-child(4) {
 			text-align: center;
 		}
+	
+	.profile-content .service-table {
+		margin-top: 0;
+	}
+	.profile-content .service-table th {
+		height: 50px;
+		border-right: 1px solid #FFF;
+		background: #6581CC;
+		color: #FFF;
+		font-size: 13px;
+		text-align: left;
+		font-family: RobotoLight;
+	}
 		
 .my-order-summary {
 	padding: 30px 20px;
@@ -1759,6 +1779,7 @@ span.summ.summ-bold:after {
 	}
 	.cart .spoiler {
 		color: #424242;
+		position: relative;
 	}
 		.cart .spoiler > span {
 			font-size: 16px;
@@ -2283,6 +2304,101 @@ span.summ.summ-bold:after {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
+	.take-variant {
+		top: auto;
+		margin-bottom: 20px;
+	}
+	.cart .spoiler:before {
+		content: 'Глажка включена';
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #858585;
+		font-size: 13px;
+		font-family: RobotoLight;
+	}
+	.my-orders-table table thead {
+		display: none;
+	}
+	.my-orders-table tbody tr {
+		
+	}
+	.my-orders-table tbody tr:hover {
+		background-color: inherit;
+	}
+	.my-orders-table td:nth-child(1) {
+		position: absolute;
+		width: 100%;
+		background: #F6F6F6;
+	}
+	.my-orders-table td:nth-child(2),
+	.my-orders-table td:nth-child(3),
+	.my-orders-table td:nth-child(4) {
+		padding-top: 70px;
+		padding-bottom: 25px;
+	}
+	.my-orders-table td:nth-child(2) {
+		width: 50%;
+		text-align: right;
+	}
+	.cart-summary li .dotts-between .left,
+	.cart-summary li .description {
+		width: 64%;
+	}
+	.profile {
+		padding: 0 15px;
+	}
+	.profile-content h1, .profile-content h2 {
+		font-size: 30px;
+	}
+	.breadcrumbs {
+		border: none;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#reverse-blocks {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+		#reverse-blocks > div:first-child {
+			-webkit-box-ordinal-group: 3;
+			-ms-flex-order: 2;
+			order: 2;
+		}
+		#reverse-blocks > div {
+			-webkit-box-ordinal-group: 2;
+			-ms-flex-order: 1;
+			order: 1;
+		}
+	.profile-content {
+		padding: 0 15px;
+	}
+	.my-orders li {
+		margin-right: 15px;
+		width: 136px;
+		height: 130px;
+	}
+		.my-orders li:last-child {
+			margin-right: 0;
+		}
+	#add-adress {
+		padding: 30px 15px 20px 15px;
+	}
+	.profile-controls {
+		padding: 30px 20px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -2420,8 +2536,30 @@ span.summ.summ-bold:after {
 			font-size: 14px;
 			letter-spacing: inherit;
 		}
-	
+	.trigger-buttons label {
+		padding: 10px 12px;
+	}
+	.blue-button,
+	.grey-button {
+		padding: 14px 20px !important;
+		border-radius: 24px !important;
+	}
+	#delivery-form .delivery-form select option {
+		padding: 6px 11px;
+	}
+	.my-orders-table td:nth-child(2) {
+		text-align: left;
+	}
+	.cart .num {
+		width: 90px;
+	}
+	.cart-summary li .dotts-between .left, 
+	.cart-summary li .dotts-between .right, 
+	.cart-summary li .dotts-between {
+		height: auto;
+	}
 }
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
