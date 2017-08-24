@@ -307,6 +307,7 @@ $(document).ready(function() {
 		$('.cart a.blue-button').text('ПОДТВЕРДИТЬ');
 	}
 	
+	
 	/* Это удалить в релизе */
 	$('.carousel-item').on('click', function(){
 		$('.subcategory-item').remove();

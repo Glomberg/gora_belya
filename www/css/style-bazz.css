@@ -1248,6 +1248,11 @@ span.summ.summ-bold:after {
 		font-size: 12px;
 		font-family: RobotoLight;
 	}
+.my-orders-content .breadcrumbs,
+.single-order .breadcrumbs {
+	padding-bottom: 10px;
+	margin-top: 26px;
+}
 .profile {
 	padding-right: 20px
 }
@@ -1427,13 +1432,18 @@ span.summ.summ-bold:after {
 		}
 .cancelled-orders-link {
 	margin-top: -20px;
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 }
 	.cancelled-orders-link a {
 		color: #6581CC;
 		font-size: 14px;
 		text-decoration: underline;
 	}
+.single-order .cancelled-orders-link {
+    margin-top: -23px;
+    margin-bottom: 24px;
+}
+
 .my-orders-filter {
 	background: #FAFAFA;
 	padding: 25px 30px;
@@ -1627,31 +1637,136 @@ span.summ.summ-bold:after {
 	
 	.profile-content .service-table {
 		margin-top: 0;
+		margin-bottom: 50px;
 	}
-	.profile-content .service-table th {
-		height: 50px;
-		border-right: 1px solid #FFF;
-		background: #6581CC;
-		color: #FFF;
-		font-size: 13px;
-		text-align: left;
-		font-family: RobotoLight;
-	}
+		.profile-content .service-table tr > *,
+		.profile-content .service-table tr > * span {
+			font-family: RobotoLight;
+		}
+		.profile-content .service-table th {
+			height: 50px;
+			border-right: 1px solid #FFF;
+			background: #6581CC;
+			color: #FFF;
+			font-size: 13px;
+			text-align: left;
+		}
+		.profile-content .service-table td {
+			padding-top: 13px;
+			padding-bottom: 13px;
+			border: 1px solid #EEEEEE !important;
+		}
+		.profile-content .service-table tr > *:nth-child(1) {
+			width: 15.7%;
+			padding: 0;
+			padding-left: 12px;
+			text-align: left;
+		}
+		.profile-content .service-table tbody tr > *:nth-child(1) {
+			font-size: 12px;
+		}
+		.profile-content .service-table tr > *:nth-child(2) {
+			width: 18.3%;
+			text-align: center;
+		}
+		.profile-content .service-table tr > *:nth-child(3) {
+			width: 17.4%;
+			text-align: center;
+		}
+		.profile-content .service-table tr > *:nth-child(4) {
+			width: auto;
+			padding-left: 12px;
+			text-align: left;
+		}
+		.profile-content .service-table tr > *:nth-child(5) {
+			width: 24%;
+			padding-left: 12px;
+			text-align: left;
+			font-size: 12px;
+		}
+		
+		.profile-content .service-table tr > *:nth-child(1) a {
+			color: #6581CC;
+			text-decoration: underline;
+			display: block;
+		}
+		
+		.profile-content .service-table tr > *:nth-child(4) span {
+			display: block;
+		}
+		
+		.profile-content .service-table tr > *:nth-child(5) > * {
+			display: block;
+			color: #757575;
+			font-size: 12px;
+		}
+		.profile-content .service-table tr > *:nth-child(5) a {
+			font-size: 16px;
+			font-family: RobotoBold;
+			color: #FF4081;
+			text-decoration: underline;
+		}
+		.profile-content .service-table tr > *:nth-child(5) a.cancel-link {
+			font-size: inherit;
+			color: inherit;
+			font-family: inherit;
+			text-decoration: none;
+		}
+		.profile-content .service-table tr > *:nth-child(5) a.restore-order {
+			font-family: Roboto;
+			font-size: 14px;
+			color: #6581CC;
+		}
+		.profile-content .service-table tr > *:nth-child(5) strong {
+			font-size: 16px;
+			font-family: RobotoBold;
+		}
+		
+		.my-orders-table.order-single th {
+			border-right: 1px solid #FFF;
+		}
+		.my-orders-table.order-single td {
+			border: 1px solid #EEEEEE;
+			padding: 11px;
+		}
+		.my-orders-table.order-single td:nth-child(1), 
+		.my-orders-table.order-single th:nth-child(1) {
+			width: 44%;
+			text-align: left;
+		}
+			.my-orders-table.order-single td:nth-child(1) {
+				padding-left: 24px;
+			}
+		.my-orders-table.order-single td:nth-child(2), 
+		.my-orders-table.order-single th:nth-child(2) {
+			width: 25%;
+			text-align: center;
+		}
+		.my-orders-table.order-single td:nth-child(3), 
+		.my-orders-table.order-single th:nth-child(3) {
+			width: auto;
+			text-align: center;
+		}
+		.my-orders-table.order-single td:nth-child(4), 
+		.my-orders-table.order-single th:nth-child(4) {
+			width: 15%;
+			text-align: center;
+		}
 		
 .my-order-summary {
-	padding: 30px 20px;
+	padding: 36px 20px 39px;
 	background: #F6F6F6;
 	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.3);
-	margin-bottom: 18px;
+	margin-bottom: 20px;
 }
 	.my-order-summary ul {
-		margin-bottom: 30px;
+		margin-bottom: 39px;
 	}
 		.my-order-summary li {
 			position: relative;
 			font-size: 14px;
 			color: #424242;
-			margin-bottom: 10px;
+			margin-bottom: 8px;
 		}
 		.my-order-summary li:before {
 			content: '';
@@ -1675,7 +1790,7 @@ span.summ.summ-bold:after {
 			z-index: 1;
 		}
 		.my-order-summary li div {
-			width: 50%;
+			width: 48%;
 			position: relative;
 			float: right;
 			background: #F6F6F6;
@@ -1686,6 +1801,9 @@ span.summ.summ-bold:after {
 			.my-order-summary li div strong  span {
 				font-family: RobotoBold;
 			}
+			.my-order-summary li div strong  span.summ {
+				font-size: 16px;
+			}
 			.my-order-summary li div strong  span:after {
 				content: '1';
 			}
@@ -1695,13 +1813,13 @@ span.summ.summ-bold:after {
 	color: #6581CC;
 	text-decoration: underline;
 	background: url('../images/get-invoice-ico.png') no-repeat right center;
-	padding-right: 35px;
+	padding-right: 39px;
 }
 .my-orders-table.order-single {
-	margin-bottom: 50px;
+	margin-bottom: 52px;
 }
 .my-order-comments {
-	margin-bottom: 40px;
+	margin-bottom: 49px;
 }
 #my-order-comments {
 	margin-bottom: 20px;
@@ -1717,7 +1835,7 @@ span.summ.summ-bold:after {
 		border: none;
 		resize: none;
 		padding: 15px;
-		margin-bottom: 20px;
+		margin-bottom: 23px;
 	}
 	#my-order-comments > div {
 		text-align: right;
@@ -1740,7 +1858,7 @@ span.summ.summ-bold:after {
 		margin-bottom: 8px;
 		border-radius: 4px;
 		background: #F6F6F6;
-		padding: 30px;
+		padding: 37px 26px;
 		box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.3);
 		color: #212121;
 	}
@@ -2273,6 +2391,51 @@ span.summ.summ-bold:after {
 	.trigger-buttons label:nth-child(2) {
 		margin-right: 0;
 	}
+	#reverse-blocks {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+		#reverse-blocks > div:first-child {
+			-webkit-box-ordinal-group: 3;
+			-ms-flex-order: 2;
+			order: 2;
+		}
+		#reverse-blocks > div {
+			-webkit-box-ordinal-group: 2;
+			-ms-flex-order: 1;
+			order: 1;
+		}
+	.my-orders-content .breadcrumbs {
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+		width: calc(100% - 30px);
+	}
+	.profile-content {
+		padding: 0;
+	}
+	.profile-content h2,
+	.cancelled-orders-link,
+	.profile-content .service-table {
+		padding: 0 15px;
+	}
+	.profile-content .service-table {
+		margin: 0 15px;
+		width: calc(100% - 30px);
+		margin-bottom: 26px;
+	}
+	.my-orders-filter {
+		padding-left: 30px;
+	}
+	.profile {
+		padding-right: 0;
+	}
+
 }
 
 /* Small Devices, Tablets */
@@ -2356,25 +2519,7 @@ span.summ.summ-bold:after {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	#reverse-blocks {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-		flex-direction: column;
-	}
-		#reverse-blocks > div:first-child {
-			-webkit-box-ordinal-group: 3;
-			-ms-flex-order: 2;
-			order: 2;
-		}
-		#reverse-blocks > div {
-			-webkit-box-ordinal-group: 2;
-			-ms-flex-order: 1;
-			order: 1;
-		}
+	
 	.profile-content {
 		padding: 0 15px;
 	}
@@ -2398,7 +2543,102 @@ span.summ.summ-bold:after {
 		-ms-flex-pack: justify;
 		justify-content: space-between;
 	}
-
+	.dropdown-list {
+		float: none;
+		margin-top: 10px;
+	}
+	.profile-content .service-table thead {
+		display: none;
+	}
+	.profile-content .service-table tr {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		padding-bottom: 30px;
+	}
+		.profile-content .service-table tr:hover {
+			background: none;
+		}
+		.profile-content .service-table tr td {
+			width: 100%;
+			text-align: left !important;
+			position: relative;
+			border: none !important;
+		}
+			.profile-content .service-table tr td:hover {
+				background: none;
+			}
+			.profile-content .service-table tr td:before {
+				position: absolute;
+				left: 15px;
+				top: 14px;
+				color: #424242;
+				font-size: 14px;
+				font-family: RobotoLight;
+				background: #FFF;
+				padding-right: 4px;
+				display: inline-block;
+				z-index: 2;
+			}
+			.profile-content .service-table tr td:after {
+				position: absolute;
+				top: 29px;
+				left: 15px;
+				width: calc(50% - 20px);
+				border-bottom: dashed 1px #999999;
+				z-index: 1;
+			}
+			.profile-content .service-table tr td:first-child:after {
+				content: '';
+				width: 100%;
+				border-bottom: solid 1px #EEEEEE;
+				left: 0;
+			}
+		.profile-content .service-table tbody tr > :nth-child(1) {
+			width: 100%;
+			color: #6581CC;
+			font-family: NotoSerifBold;
+			font-size: 16px;
+			text-decoration: underline;
+			border-bottom: 1px solid #FAFAFA;
+		}
+		.profile-content .service-table tr > :nth-child(1) a {
+			color: #6581CC;
+			font-family: NotoSerifBold;
+			font-size: 16px;
+			display: inline-block;
+		}
+		.profile-content .service-table tr > :nth-child(2),
+		.profile-content .service-table tr > :nth-child(3),
+		.profile-content .service-table tr > :nth-child(4),
+		.profile-content .service-table tr > :nth-child(5){
+			width: 100%;
+			padding-left: 50%;
+		}
+			.profile-content .service-table tr > :nth-child(2):before {
+				content: 'Сумма заказа';
+			}
+			.profile-content .service-table tr > :nth-child(3):before {
+				content: 'Позиций, шт.';
+			}
+			.profile-content .service-table tr > :nth-child(4):before {
+				content: 'Опции';
+			}
+			.profile-content .service-table tr > :nth-child(5):before {
+				content: 'Статус';
+			}
+			.profile-content .service-table tr > :nth-child(2):after,
+			.profile-content .service-table tr > :nth-child(3):after,
+			.profile-content .service-table tr > :nth-child(4):after,
+			.profile-content .service-table tr > :nth-child(5):after{
+				content: '';
+			}
+			
+		
 }
 
 /* Extra Small Devices, Phones */
@@ -2557,6 +2797,29 @@ span.summ.summ-bold:after {
 	.cart-summary li .dotts-between .right, 
 	.cart-summary li .dotts-between {
 		height: auto;
+	}
+	.profile-content h2 {
+		font-size: 20px;
+	}
+	.my-orders-filter {
+		padding: 30px 15px;
+	}
+	.my-orders-filter > span {
+		display: none;
+	}
+	.my-orders-filter .from:before,
+	.my-orders-filter .to:before {
+		left: 6px;
+	}
+	.my-orders-filter input {
+		padding: 0 25px;
+		width: 126px;
+	}
+	.my-orders-filter .calendar-ico {
+		right: 4px;
+	}
+	.cancelled-orders-link {
+		margin-top: 0;
 	}
 }
 
