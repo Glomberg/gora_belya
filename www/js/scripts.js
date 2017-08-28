@@ -1,6 +1,11 @@
 /* ******************** */
 $(document).ready(function() {
-	SliderFlex('#slider', 125000, 1000, '#slider-nav');
+	
+	// Проверяйте всегда, пожалуйста, наличие нужных элементов в текущем DOM
+	if ( $('#slider').length >= 1 ) {
+		SliderFlex('#slider', 125000, 1000, '#slider-nav');
+	}
+	
 
 	$('.ask-question').click(function(e){
         e.preventDefault();
