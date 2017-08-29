@@ -1,6 +1,8 @@
 /* ******************** */
 $(document).ready(function() {
 	
+	"use strict";
+	
 	// Проверяйте всегда, пожалуйста, наличие нужных элементов в текущем DOM
 	if ( $('#slider').length >= 1 ) {
 		SliderFlex('#slider', 125000, 1000, '#slider-nav');
@@ -205,6 +207,13 @@ $(document).ready(function() {
 				$(this).find('.price').show().addClass('small-price');
 			}
 		});
+		check_badge();
+	}
+	
+	function check_badge() {
+		$('.subcategory-item').each(function(){
+			$(this).find('input');
+		});
 	}
 	
 	if ( $('.checkout-duration').length >= 1 ) {
@@ -311,7 +320,7 @@ $(document).ready(function() {
 	if ( $(window).width() < 480 || screen.width < 480 ) {
 		$('.cart a.blue-button').text('ПОДТВЕРДИТЬ');
 	}
-	
+		
 	
 	/* Это удалить в релизе */
 	$('.carousel-item').on('click', function(){
@@ -332,7 +341,11 @@ $(document).ready(function() {
 });
 
 //Хорошо бы это дело перенести в плагин
-function SliderFlex(select, speedSlide = 1000, speedTransition = 200, sliderNav) {
+function SliderFlex(select, speedSlide, speedTransition, sliderNav) {
+		
+	if (speedSlide == undefined) speedSlide = 1000;
+	if (speedTransition == undefined) speedTransition = 200;
+	
 	var slider = $(select);
 	slider.find('.active_slide').removeClass('active_slide');
 	var firstSlide = $(select).find('.slider_wrap > *').first();
