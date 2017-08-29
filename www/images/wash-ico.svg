@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 59">
 	<style><![CDATA[
-		.sprite { display: none; }
-		.sprite:target { display: inline; }
+		svg > g { display: none; }
+		svg > g:target { display: inline; }
 		.grey{fill:none;stroke:#3f3f3f;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
 		.white{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
 	]]></style>
