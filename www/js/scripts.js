@@ -292,7 +292,7 @@ $(document).ready(function() {
 		$('.datepicker-2').datepicker({
 			dateFormat:   "d M, DD",
 		});
-		$('.calendar-ico').on('click', function(){
+		$('.calendar-ico, .delivery-form .calendar-ico > .ico').on('click', function(){
 			$(this).siblings('input').focus();
 		});		
 	}

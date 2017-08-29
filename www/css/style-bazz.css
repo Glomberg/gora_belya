@@ -937,6 +937,7 @@ span.summ.summ-bold:after {
 .methods-buttons {
 	height: 50px;
 	margin-bottom: 50px;
+	padding: 0 15px;
 }
 .methods .courier {
 	opacity: 0;
@@ -988,8 +989,7 @@ span.summ.summ-bold:after {
 		display: block;
 		clear: both;
 	}
-	.delivery-form .calendar-ico:before {
-		content: '';
+	.delivery-form .calendar-ico > .ico {
 		position: absolute;
 		top: calc(50% - 9.5px);
 		right: 40px;
@@ -997,11 +997,10 @@ span.summ.summ-bold:after {
 		height: 19px;
 		background: url('../images/calendar-ico.png') no-repeat center top;
 	}
-		.delivery-form .calendar-ico:hover:before {
+		.delivery-form .calendar-ico:hover > .ico {
 			background-position: center bottom;
 		}
-	.delivery-form .watch-ico:before {
-		content: '';
+	.delivery-form .watch-ico > .ico {
 		position: absolute;
 		top: calc(50% - 8.5px);
 		right: 40px;
@@ -1009,9 +1008,17 @@ span.summ.summ-bold:after {
 		height: 17px;
 		background: url('../images/watch-icon.png') no-repeat center top;
 	}
-		.delivery-form .watch-ico:hover:before {
+		.delivery-form .watch-ico:hover > .ico {
 			background-position: center bottom;
 		}
+.deliveri-description {
+	color: #858585;
+	padding: 30px 0;
+	font-size: 15px;
+}
+	.deliveri-description strong {
+		font-family: RobotoBold;
+	}
 .delivery-form input,
 .delivery-form textarea,
 .delivery-form select,
@@ -1024,6 +1031,8 @@ span.summ.summ-bold:after {
 	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.3);
 	color: #424242;
 	font-size: 15px;
+	-webkit-appearance: none;
+	outline: none;
 }
 .delivery-form .datepicker-2 {
 	color: #858585;
@@ -1188,13 +1197,26 @@ span.summ.summ-bold:after {
 	}
 	.unlimited-header > div {
 		color: #424242;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin-bottom: 30px;
+		padding: 0 15px;
+	}
+	.unlimited-header span {
+		text-align: right;
 	}
 	.unlimited-header .num {
 		display: inline-block;
 		width: 145px;
 		position: relative;
-		margin: 0 20px;
-		margin-bottom: 30px;
+		margin: 0 15px;
 	}
 .unlimited-body {
 	margin-bottom: 25px;
@@ -1209,6 +1231,10 @@ span.summ.summ-bold:after {
 		margin: 0;
 		border: none;
 		background: transparent;
+	}
+	.unlimited-body .checkout-duration {
+		border-right: 1px solid #F0F0F0;
+		margin-right: 20px;
 	}
 	.unlimited-body .checkout-options {
 		margin-bottom: 145px;
@@ -2495,15 +2521,21 @@ span.summ.summ-bold:after {
 			order: 2;
 			margin-bottom: 20px;
 		}
-	.checkout-left, .unlimited-body, .cart {
+	.checkout-left, .cart {
 		padding: 0 15px;
 	}
-	.checkout-right {
+	.checkout-right, .unlimited-body {
 		padding: 0;
 	}
 	.checkout-sidebar > div.checkout-duration {
 		background: transparent;
 		border-bottom: none;
+	}
+	.checkout-duration h4 {
+		margin-bottom: 25px;
+	}
+	.unlimited-button .policy span {
+		display: none;
 	}
 	.checkout-options input + label {
 		line-height: 1;
@@ -2511,13 +2543,25 @@ span.summ.summ-bold:after {
 	.methods .row > div:last-child {
 		padding-left: 0;
 	}
-	#delivery-form {
-		margin-left: 15px;
-		margin-right: 15px;
+	.methods .row > div:last-child .inputs-row {
+		max-width: 230px;
+	}
+	.delivery-form .time-from-to select {
+		padding: 0 4px;
+	}
+	.delivery-form .calendar-ico > .ico,
+	.delivery-form .watch-ico > .ico {
+		right: 16px;
 	}
 	.take-variant {
 		top: auto;
 		margin-bottom: 20px;
+	}
+	.remote-zones-info {
+		display: none;
+	}
+	.delivery-form .inputs-row {
+		padding-right: 0;
 	}
 	.cart .spoiler:before {
 		content: 'Глажка включена';
@@ -2776,6 +2820,7 @@ span.summ.summ-bold:after {
 	.checkout-header-steps {
 		width: 100%;
 		padding: 0 30px;
+		padding-right: 0;
 	}
 	.checkout-header-steps > div:nth-child(2) {
 		-webkit-box-flex: 1;
@@ -2787,6 +2832,10 @@ span.summ.summ-bold:after {
 	}
 	.checkout-header-steps-title {
 		font-size: 16px;
+	}
+	.checkout-header-steps-description,
+	.checkout-header-steps-description a {
+		font-size: 12px;
 	}
 	.owl-carousel {
 		padding: 0px 6.33%;
@@ -2869,6 +2918,10 @@ span.summ.summ-bold:after {
 		.unlimited-body .checkout-summary * {
 			color: #FFF !important;
 		}
+	.unlimited-body .checkout-duration {
+		border-right: none;
+		margin-right: 0;
+	}
 	.checkout-options input + label {
 		line-height: 1;
 		padding-top: 5px;
@@ -2932,12 +2985,16 @@ span.summ.summ-bold:after {
 			margin-right: 7px;
 		}
 	.methods {
-		padding: 30px 0;
+		padding: 30px 15px;
 	}
 		.trigger-buttons label {
 			font-size: 14px;
 			letter-spacing: inherit;
 		}
+	.methods .delivery, .methods .payment {
+		font-size: 16px;
+		background-size: contain;
+	}
 	.trigger-buttons label {
 		padding: 10px 12px;
 	}
@@ -2945,6 +3002,10 @@ span.summ.summ-bold:after {
 	.grey-button {
 		padding: 14px 20px !important;
 		border-radius: 24px !important;
+	}
+	.grey-button {
+		width: calc(100% - 15px);
+		text-align: center;
 	}
 	#delivery-form .delivery-form select option {
 		padding: 6px 11px;
@@ -2982,6 +3043,16 @@ span.summ.summ-bold:after {
 	}
 	.cancelled-orders-link {
 		margin-top: 0;
+	}
+	#delivery-form input[name="take-variant"] + label {
+		margin-bottom: 0;
+	}
+	#delivery-form input[id="take-variant-1"] + label + .trigger-buttons {
+		height: 0;
+	}
+	#delivery-form input[id="take-variant-1"]:checked + label + .trigger-buttons {
+		height: auto;
+		margin-top: 25px;
 	}
 }
 

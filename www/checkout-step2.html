@@ -286,7 +286,7 @@
 				<div class="row delivery-form">
 					
 					<div class="col-xs-12 col-sm-6 left-inputs">
-						<h3>Укажите откуда забрать вещи</h3>
+						<h3>Укажите откуда забрать вещи:</h3>
 						<div class="inputs-row">
 							<select name="adress-from-option" id="adress-from-option">
 								<option value="empty" selected>Заполнить вручную ниже</option>
@@ -304,11 +304,11 @@
 							</div>
 						</div>
 						<div class="inputs-row">
-							<input type="text" placeholder="Населенный пункт">
+							<input type="text" placeholder="Населенный пункт" required>
 						</div>
 						<div class="inputs-row">
-							<input type="text" placeholder="улица">
-							<input type="text" placeholder="дом">
+							<input type="text" placeholder="улица" required>
+							<input type="text" placeholder="дом" required>
 						</div>
 						<div class="inputs-row">
 							<input type="text" placeholder="корпус">
@@ -320,23 +320,28 @@
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 right-inputs">
-						<h3>Когда забрать у вас заказ</h3>
+						<h3>Когда забрать у вас заказ:</h3>
 						<div class="inputs-row calendar-ico">
-							<input type="text" class="datepicker-2">
+							<div class="ico"></div>
+							<input type="text" class="datepicker-2" required>
 						</div>
 						<div class="inputs-row watch-ico">
+							<div class="ico"></div>
 							<div class="time-from-to">
 								<label for="time-from">с</label>
-								<select name="time-from" id="time-from">
+								<select name="time-from" id="time-from" required>
 									<option value="00:00">00:00</option>
 									<option value="01:00">01:00</option>
 								</select>
 								<label for="time-to">до</label>
-								<select name="time-to" id="time-to">
+								<select name="time-to" id="time-to" required>
 									<option value="00:00">00:00</option>
 									<option value="01:00">01:00</option>
 								</select>
 							</div>
+						</div>
+						<div class="deliveri-description">
+							Заказ будет готов <strong>до 15:00 22 июня</strong> (нужно раньше? измените дату приема заказа или выберите тариф экспресс на предыдущем шаге).
 						</div>
 					</div>
 				</div>
