@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Страница входа - форма входа</title>
+	<title>Страница входа - восстановление пароля</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.grid.css" rel="stylesheet">
@@ -216,35 +216,20 @@
 </header>
 
 <!-- CONTENT  -->
-<div class="container login-page"><div class="col-xs-12 col-sm-3 col-md-4"></div>
+<div class="container login-page">
+	<div class="row">
+		<div class="col-xs-12 col-sm-3 col-md-4"></div>
 		<div class="col-xs-12 col-sm-6 col-md-4">
-			<div class="unlimited-header">
+			<div class="unlimited-header big-margin">
 				<img src="images/unlim-ico-blue.svg" alt="">
 			</div>
-			<nav class="select-customer-type align-center">
-				<ul>
-					<li>Я уже зарегистрирован</li>
-					<li><a href="register-full-form.html">Я новый клиент</a></li>
-				</ul>
-			</nav>
-			<form action="/" class="edit-form" id="login-form">
+			<div class="description align-center">Восстановление пароля</div>
+			<form action="/" class="edit-form" id="register-fast">
 				<div class="edit-form-name">
-					<input type="text" placeholder="Email / логин" required>
-				</div>
-				<div class="edit-form-pass">
-					<input type="text" placeholder="Пароль" required>
+					<input type="text" placeholder="Email / Логин">
 				</div>
 				<div class="align-center">
-					<input type="submit" class="blue-button violet-button" value="ВОЙТИ">
-				</div>
-				<div class="login-options">
-					<div class="remember-me">
-						<input type="checkbox" id="remember-me">
-						<label for="remember-me">Запомнить меня</label>
-					</div>
-					<div class="forgot-pass">
-						<a href="#">Забыли пароль?</a>
-					</div>
+					<input type="submit" class="blue-button violet-button" value="ОТПРАВИТЬ ПАРОЛЬ">
 				</div>
 			</form>
 		</div>

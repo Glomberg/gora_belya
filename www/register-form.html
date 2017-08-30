@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Страница входа - форма входа</title>
+	<title>Регистрация - быстрая регистрация</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/bootstrap.grid.css" rel="stylesheet">
@@ -223,27 +223,27 @@
 			</div>
 			<nav class="select-customer-type align-center">
 				<ul>
-					<li>Я уже зарегистрирован</li>
-					<li><a href="register-full-form.html">Я новый клиент</a></li>
+					<li><a href="login-form.html">Я уже зарегистрирован</a></li>
+					<li>Я новый клиент</li>
 				</ul>
 			</nav>
-			<form action="/" class="edit-form" id="login-form">
+			<form action="/" class="edit-form" id="register-fast">
 				<div class="edit-form-name">
-					<input type="text" placeholder="Email / логин" required>
+					<input type="text" placeholder="Email">
 				</div>
 				<div class="edit-form-pass">
-					<input type="text" placeholder="Пароль" required>
+					<input type="text" placeholder="Придумайте пароль">
+				</div>
+				<div class="edit-form-pass">
+					<input type="text" placeholder="Повторите пароль">
 				</div>
 				<div class="align-center">
-					<input type="submit" class="blue-button violet-button" value="ВОЙТИ">
+					<input type="submit" class="blue-button violet-button" value="СОЗДАТЬ ЛИЧНЫЙ КАБИНЕТ">
 				</div>
 				<div class="login-options">
-					<div class="remember-me">
+					<div class="remember-me align-center">
 						<input type="checkbox" id="remember-me">
 						<label for="remember-me">Запомнить меня</label>
-					</div>
-					<div class="forgot-pass">
-						<a href="#">Забыли пароль?</a>
 					</div>
 				</div>
 			</form>

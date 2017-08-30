@@ -2232,12 +2232,18 @@ span.summ.summ-bold:after {
 	.login-page .unlimited-header {
 		padding-top: 80px;
 	}
-	.big-margin {
+	.login-page .unlimited-header.big-margin {
 		padding-top: 190px;
 	}
 	.login-page .description {
 		color: #424242;
 		font-size: 14px;
+	}
+	.login-page .continue-button {
+		display: inline-block;
+		margin-top: 20px;
+		padding-top: 22px;
+		border-top: 1px solid #EEEEEE;
 	}
 .select-customer-type {
 	margin-top: 15px;
@@ -2302,14 +2308,18 @@ span.summ.summ-bold:after {
 		letter-spacing: 0.6px;
 		padding-left: 35px;
 	}
-	.login-form-full input[type="submit"] {
+	.edit-form input[type="submit"] {
 		border: none;
-		width: 85%;
+		width: 100%;
 		color: #EEEEEE;
 		font-size: 15px;
 		padding: 0;
 		letter-spacing: 1px;
+		margin-bottom: 20px;
 	}
+		.edit-form.login-form-full input[type="submit"] {
+			width: 85%;
+		}
 		.login-form-full .edit-form-date input ,
 		.login-form-full .edit-form-phone input {
 			width: 48%;
@@ -2348,6 +2358,69 @@ span.summ.summ-bold:after {
 			width: 33.34%;
 		}
 	
+	.login-options .remember-me {
+		float: left;
+	}
+	#register-fast .login-options .remember-me {
+		float: none;
+	}
+	.login-options .remember-me input {
+		display: none;
+	}
+	.login-options .remember-me label {
+		display: inline-block;
+		color: #424242;
+		font-size: 12px;
+		font-family: RobotoLight;
+		padding-left: 28px;
+		line-height: 20px;
+		position: relative;
+		cursor: pointer;
+	}
+		.login-options .remember-me label:before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			top: 0;
+			border-radius: 4px;
+			border: 1px solid #E0E0E0;
+		}
+		.login-options .remember-me label:after {
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 7px;
+			left: 4px;
+			top: 7px;
+			background: url('../images/select-ico.png') no-repeat center center;
+			visibility: hidden;
+			opacity: 0;
+			transform: scale(0);
+			-webkit-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+			-o-transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+			transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+		}
+		.login-options .remember-me input:checked + label:after {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+		}
+		.login-options .forgot-pass {
+			float: right;
+		}
+		.login-options .forgot-pass a {
+			color: #6581CC;
+			text-decoration: underline;
+			font-size: 12px;
+			font-family: RobotoLight;
+		}
+	#register-fast {
+		margin-top: 10px;
+		padding-top: 35px;
+		border-top: 1px solid #EEEEEE;
+	}
 	
 
 		
@@ -2977,6 +3050,20 @@ span.summ.summ-bold:after {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+	.login-form-full > div:first-child {
+		background: transparent;
+		box-shadow: none;
+		padding: 0 15px;
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	.login-form-full > div:last-child {
+		padding: 0 15px;
+		margin: 0;
+	}
+	.login-page form > div {
+		margin: 0 15px;
+	}
 }
 
 /* Extra Small Devices, Phones */
@@ -3174,6 +3261,10 @@ span.summ.summ-bold:after {
 		padding: 14px 20px !important;
 		border-radius: 24px !important;
 	}
+	input.blue-button, 
+	input.grey-button {
+		padding: 0 !important;
+	}
 	.grey-button {
 		width: calc(100% - 15px);
 		text-align: center;
@@ -3243,6 +3334,7 @@ span.summ.summ-bold:after {
 	.login-page .description {
 		padding: 0 15px;
 	}
+	
 }
 
 
