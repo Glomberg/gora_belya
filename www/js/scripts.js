@@ -124,6 +124,7 @@ $(document).ready(function() {
 	$('.owl-carousel .carousel-item').on('click', function(){
 		$('.owl-carousel').find('.carousel-item').removeClass('selected');
 		$(this).addClass('selected');
+		load_subcategory_list();
 	})
 	
 	if ( $('.change-mode').length >= 1 ) {
@@ -143,6 +144,8 @@ $(document).ready(function() {
 	
 	if ( $('.subcategory-item').length >= 1 ) {
 		check_prices();
+		load_subcategory_list();
+		check_badge();
 	}
 	$('.controls > div').on('click', function(){
 		if( $(this).hasClass('active') ) {
@@ -211,8 +214,27 @@ $(document).ready(function() {
 	}
 	
 	function check_badge() {
-		$('.subcategory-item').each(function(){
-			$(this).find('input');
+		$('.carousel-item').each(function(){
+			$(this).find('.count-badge').remove();
+			var current_group = $(this).attr('data-group');
+			var i = 0;
+			$('.subcategory-item[data-group="' + current_group + '"]').each(function(){
+				i += parseInt( $(this).find('input').val() );
+			});
+			if ( i != 0 ) {
+				$(this).append('<div class="count-badge">' + i + '</div>');
+				$('.count-badge').addClass('visible');
+			}
+		});
+	}
+	
+	function load_subcategory_list() {
+		$('.subcategory-item').removeClass('visible').hide();
+		$('.carousel-item').each(function(){
+			if ( $(this).hasClass('selected') ) {
+				var group = $(this).attr('data-group');
+				$('.subcategory-item[data-group="' + group + '"]').show().addClass('visible');
+			}
 		});
 	}
 	
@@ -320,21 +342,31 @@ $(document).ready(function() {
 	if ( $(window).width() < 480 || screen.width < 480 ) {
 		$('.cart a.blue-button').text('ПОДТВЕРДИТЬ');
 	}
-		
 	
-	/* Это удалить в релизе */
-	$('.carousel-item').on('click', function(){
-		$('.subcategory-item').remove();
-		$.ajax({
-			url : 'list.html',
-			dataType : 'html',
-			success : function(data){
-				var count = Math.floor((Math.random() * 10) + 1);
-				for ( var i = 0; i <= count; i++ ) {
-					$('.subcategory-list').append(data).hide().fadeIn();
+	/* Валидация полей (просто на заполненность) */
+	$('[data-required="required"]').find('input').on('change keyup', function(){
+		$(this).parent('[data-required="required"]').removeClass('wrong-value');
+	});
+	$('form').on('submit', function(){
+		var this_form = $(this);
+		if( $(this).find('[data-required="required"]').length >= 1 ) {
+			$('[data-required="required"]').removeClass('wrong-value');
+			$(this).find('[data-required="required"]').each(function(){
+				if ( $(this).find('input').val() == '' ) {
+					this_form.prepend('<div class="wrong-value-text">Пожалуйста, проверьте<br>правильность данных</div>');
+					var wrong_message = $('.wrong-value-text');
+					wrong_message.hide().fadeIn();
+					setTimeout(function(){
+						wrong_message.fadeOut();
+					}, 3000);
+					setTimeout(function(){
+						wrong_message.remove();
+					}, 3400);
+					$(this).addClass('wrong-value');
+					return false;
 				}
-			}
-		});
+			});
+		}
 	});
 		
 	
