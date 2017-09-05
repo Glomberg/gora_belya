@@ -189,6 +189,7 @@ $(document).ready(function() {
 	}
 	function calculate() {
 		$('.subcategory-item').each(function(){
+			var bold_price = '';
 			var price = parseInt( $(this).attr('data-price'), 10 );
 			if ( $(this).find('input').val() === "" ) {
 				$(this).find('input').val(0);
@@ -206,12 +207,28 @@ $(document).ready(function() {
 				$(this).find('.price').removeClass('small-price').hide();
 			}
 			if ( count > 1 ) {
-				$(this).find('.bold-price').show().text( count * price );
+				bold_price = count * price
+				if ( parseInt(bold_price) > 999 ) {
+					bold_price = addSpaces(bold_price);
+				}
+				$(this).find('.bold-price').show().text( bold_price );
 				$(this).find('.price').show().addClass('small-price');
 			}
 		});
 		check_badge();
 	}
+	
+	function addSpaces(nStr){
+		nStr += ''; 
+		var x = nStr.split('.');
+		var x1 = x[0];
+		var x2 = x.length > 1 ? '.' + x[1] : '';
+		var rgx = /(\d+)(\d{3})/;
+		while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+		}
+		return x1 + x2;
+	};
 	
 	function check_badge() {
 		$('.carousel-item').each(function(){

@@ -1231,8 +1231,8 @@ span.summ.summ-bold:after {
 	}
 #delivery-form input[type="submit"] {
 	display: inline-block;
-	padding: 10px 40px;
-	border-radius: 20px;
+	padding: 14px 40px;
+	border-radius: 24px;
 	color: #FFF;
 	font-size: 15px;
 	border: none;
@@ -2293,6 +2293,9 @@ span.summ.summ-bold:after {
 		padding-top: 22px;
 		border-top: 1px solid #EEEEEE;
 	}
+		.login-page .continue-button a {
+			width: auto;
+		}
 .select-customer-type {
 	margin-top: 15px;
 }
@@ -2361,7 +2364,7 @@ span.summ.summ-bold:after {
 		width: 100%;
 		color: #EEEEEE;
 		font-size: 15px;
-		padding: 0;
+		padding: 0 !important;
 		letter-spacing: 1px;
 		margin-bottom: 20px;
 	}
@@ -2479,6 +2482,11 @@ span.summ.summ-bold:after {
 		
 		
 /* Адаптив */
+@media only screen and (min-width : 1200px) {
+	.checkout-header-steps-title {
+		white-space: nowrap;
+	}
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.checkout-header-steps {
@@ -2889,6 +2897,9 @@ span.summ.summ-bold:after {
 	.profile-content h1, .profile-content h2 {
 		font-size: 30px;
 	}
+	.profile-content h1, .my-orders {
+		padding: 0 15px;
+	}
 	.breadcrumbs {
 		border: none;
 		padding-left: 15px;
@@ -3198,6 +3209,10 @@ span.summ.summ-bold:after {
 	}
 	.next-step-button a.blue-button {
 		letter-spacing: 1px;
+		
+	}
+	a.blue-button {
+		width: 195px;
 	}
 	.unlimited-body .checkout-sidebar > div {
 		max-width: 320px;
@@ -3315,7 +3330,7 @@ span.summ.summ-bold:after {
 		padding: 0 !important;
 	}*/
 	.grey-button {
-		width: calc(100% - 15px);
+		width: 144px;
 		text-align: center;
 	}
 	#delivery-form .delivery-form select option {
@@ -3449,5 +3464,8 @@ span.summ.summ-bold:after {
 	}
 	.edit-form span {
 		width: calc(46% - 10px);
+	}
+	.edit-profile form > div:nth-child(5):after {
+		left: calc(50% + 10px);
 	}
 }
