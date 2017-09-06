@@ -2817,7 +2817,7 @@ span.summ.summ-bold:after {
 		display: none;
 	}
 	.checkout-options input + label {
-		line-height: 1;
+		/*line-height: 1;*/
 	}
 	.methods .row > div:last-child {
 		padding-left: 0;
